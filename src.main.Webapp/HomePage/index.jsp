@@ -33,13 +33,13 @@
         <div class="resource" id="prepresource">
             <h3>Preparation Resources</h3>
             <ul>
-                <a href="../Resources/resume.jsp"><li>Resume</a></li>
-                <li><a href="../Resources/apptitude.jsp">Apptitude</a></li>
-                <li><a href="../Resources/verbal.jsp">Verbal</a></li>
-                <li><a href="../Resources/DSA.jsp">Data Structure and Algorithms</a></li>
-                <li><a href="../Resources/OperatingSystem.jsp">Operating System</a></li>
-                <li><a href="../Resources/ComputerNetworks.jsp">Computer Networks</a></li>
-                <li><a href="../Resources/DBMS.jsp">Database Management System</a></li>
+                <li><a href="../Resources/resume.jsp" class="res"><p>Resume</p></a></li>
+                <li><a href="../Resources/apptitude.jsp" class="res"><p>Apptitude</p></a></li>
+                <li><a href="../Resources/verbal.jsp" class="res"><p>Verbal</p></a></li>
+                <li><a href="../Resources/DSA.jsp" class="res"><p>Data Structure and Algorithms</p></a></li>
+                <li><a href="../Resources/OperatingSystem.jsp" class="res"><p>Operating System</p></a></li>
+                <li><a href="../Resources/ComputerNetworks.jsp" class="res"><p>Computer Networks</p></a></li>
+                <li><a href="../Resources/DBMS.jsp" class="res"><p>Database Management System</p></a></li>
             </ul>
         </div>
         
@@ -47,20 +47,20 @@
             <h3>Feedback</h2>
             
             <form action="" method="POST" class="fform">
-
-                    Your name: <br>
-                    <input type="text" name="realname" id="name" size="51"><br>
+				<div class="container">
+                    <label for="Name"><b>Your Name:</b></label><br/>
+                    <input type="text" name="realname"><br>
                     <br>
                     
-                    Your email: <br>
-                    <input type="text" name="email" id="email" size="51"><br>
+                    <label for="Email"><b>Your Email:</b></label><br/>
+                    <input type="text" name="email"><br>
                     <br>
                     
-                    Your comments: <br>
+                    <label for="comments"><b>Your Comments:</b></label><br/>
                     <textarea name="comments" rows="10" cols="50"></textarea><br><br>
                     
-                    <input type="submit" value="Submit">
-                     
+                    <button type="submit">Submit</button>
+                  </div>   
             </form>
         </div>
     </section>
