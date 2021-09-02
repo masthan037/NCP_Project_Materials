@@ -1,5 +1,102 @@
 @charset "ISO-8859-1";
+html {
+  scroll-behavior: smooth;
+}
 
+* {
+margin: 0px;
+padding: 0px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.navabrs{
+    width:100%;
+    padding: 0px; 
+}
+
+.logo{
+    color: white;
+    padding: 14px 16px;
+    float: left;
+}
+
+.links{
+    background-color: #333;
+    width: 100%;
+}
+
+.links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+  .links ul  li {
+    float: right;
+  }
+
+  .links ul  li:hover{
+    background-color:rgb(77, 77, 77);
+}
+  
+  .links ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+ .login{
+ 	width:100%;
+ 	height:max-content;
+ 	background-color:#E1F2F7;
+ }
+ 
+ .HomePage{
+ 	padding-top:5rem;
+ 	padding-bottom:10rem;
+ 	width:50%;
+ 	margin:auto;
+ 	height:max-content;
+ 
+ }
+
+.HomePage h1,h4{
+ 	width:100%;
+ 	text-align:center;
+ 	
+ }
+ 
+ .HomePage h4{
+ 	padding-bottom:2rem;
+ }
+ 
+ .HomePage h2{
+ 	width:100%;
+ 	text-align:center;
+ 	padding-bottom:2rem;
+ }
+ 
+ .Fbox{
+ 	padding-top:4rem;
+ 	padding-bottom:8rem;
+ 	padding-left:5rem;
+ 	padding-right:5rem;
+ 	width:70%;
+ 	margin:auto;
+ 	height:max-content;
+ 	border-style: solid;
+ 	border-color:#0B4141;
+    border-radius: 2rem;
+    background-color:##F6F4F2;
+ }
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
@@ -51,6 +148,10 @@ img.avatar {
   padding: 16px;
 }
 
+.container p{
+	width:100%;
+	text-align:right;
+}
 /* The "Forgot password" text */
 span.psw {
   float: right;
@@ -66,4 +167,16 @@ span.psw {
   .cancelbtn {
     width: 10%;
   }
+}
+
+  .footer{
+    height: 10rem;
+    width: 100%;
+    background-color: #333;
+    
+}
+.footer h6{
+  color: white;
+  text-align: center;
+  padding-top: 8rem;
 }
