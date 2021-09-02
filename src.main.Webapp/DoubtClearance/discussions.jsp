@@ -12,7 +12,7 @@
 <body>
 	<navbar class="navbars">
         <div class="links">
-            <p class="logo">Logo</p>
+            <p class="logo">Placement Preparation Guiders</p>
             <ul>
                 <li><a href="">LogIn/SignUp</a></li>
                 <li><a href="../DoubtClearance/questions.jsp">Doubt Assistance</a></li>

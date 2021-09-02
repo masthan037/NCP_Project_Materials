@@ -13,7 +13,7 @@
 <body>
 	<navbar class="navbars">
         <div class="links">
-            <p class="logo">Logo</p>
+            <p class="logo">Placement Preparation Guiders</p>
             <ul>
                 <li><a href="HomePage.jsp">LogIn/SignUp</a></li>
                 <li><a href="../DoubtClearance/questions.jsp">Doubt Assistance</a></li>
@@ -26,8 +26,8 @@
     
     <section class="homepage">
         <div class="headersec" id="header">
-            <h1>Heading</h1>
-            <p><i>para</i></p>
+            <h1>Placement Preparation Guiders</h1>
+            <p><i>"There are no secrets to success. It is the result of preparation, hard work, and learning from failure."- Colin Powell</i></p>
         </div>
         
         <div class="resource" id="prepresource">

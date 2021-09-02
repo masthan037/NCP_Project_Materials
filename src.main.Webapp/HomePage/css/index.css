@@ -61,7 +61,7 @@ body{
   .headersec{
       height: 40rem;
       width: 100%;
-      background-color: #92A8D1;
+      background: linear-gradient(133deg, rgba(247,247,247,1) 0%, rgba(146,168,209,1) 70%);
   }
   .headersec h1{
       padding-top: 10rem;
