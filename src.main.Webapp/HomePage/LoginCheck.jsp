@@ -14,7 +14,7 @@
 		
 	
 	if(UserName.equals("M") && Passward.equals("M")){
-		response.sendRedirect("../AfterLogIn/AfterLogin.jsp");
+		response.sendRedirect("../AfterLogIn/Login.jsp");
 	}
 	else{
 		response.sendRedirect("HomePage.jsp");
