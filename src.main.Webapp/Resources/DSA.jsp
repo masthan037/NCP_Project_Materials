@@ -32,7 +32,7 @@
 			   The Breadth-Only approach has a problem—you don’t build a strong foundation. Interviews require deep problem-solving knowledge and the ability to code fast and accurately. You only develop these skills with focused preparation.</p>
     		<br/>
     		<br/>
-    		<div class="videoCont"><iframe width="1000" height="500" src="https://www.youtube.com/embed/myZKhztFhzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    		<div class="videoCont"><iframe width="900" height="500" src="https://www.youtube.com/embed/myZKhztFhzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     		<br/>
     		<br/>
     		<h3>Step 2: Start the Depth-First Approach-make a list of core questions</h3>

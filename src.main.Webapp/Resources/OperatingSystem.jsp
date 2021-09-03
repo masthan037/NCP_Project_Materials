@@ -79,10 +79,10 @@
 		<br/>
         <h3>Helpful Videos</h3><br/>
         <h4><i>Introduction to operating system</i></h4>
-        <iframe width="1000" height="500" src="https://www.youtube.com/embed/vBURTt97EkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="900" height="500" src="https://www.youtube.com/embed/vBURTt97EkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br/><br/>
         <h4><i>Operating System (Complete Playlist)</i></h4><br/>
-        <iframe width="1000" height="500" src="https://www.youtube.com/embed/bkSWJJZNgf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="900" height="500" src="https://www.youtube.com/embed/bkSWJJZNgf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         </section>
         

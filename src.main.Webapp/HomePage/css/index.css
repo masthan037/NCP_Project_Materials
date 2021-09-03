@@ -61,21 +61,24 @@ body{
   .headersec{
       height: 40rem;
       width: 100%;
-      background: linear-gradient(133deg, rgba(247,247,247,1) 0%, rgba(146,168,209,1) 70%);
+      background: linear-gradient(306deg, rgba(0,103,184,1) 13%, rgba(26,142,185,1) 100%);
   }
   .headersec h1{
       padding-top: 10rem;
       text-align: center;
+      color:#F6F4F2;
   }
-  .headersec p{
+  .headersec h5{
       
     padding-top: 2rem;
     text-align: center;
+    color:#d7dbe5;
 }
 
   .resource{
     height: 50rem;
     width: 100%;
+    
     
  
 }
@@ -120,7 +123,7 @@ body{
   padding-top: 2rem;
   height: max-content;
   width: 100%;
-  background-color: #deeaee;
+  background: linear-gradient(306deg, rgba(75,159,225,1) 0%, rgba(205,218,255,1) 100%);
 }
 
 .feedback h3{

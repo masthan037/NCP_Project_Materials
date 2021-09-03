@@ -27,7 +27,7 @@
     <section class="homepage">
         <div class="headersec" id="header">
             <h1>Placement Preparation Guiders</h1>
-            <p><i>"There are no secrets to success. It is the result of preparation, hard work, and learning from failure."- Colin Powell</i></p>
+            <h5><i>"There are no secrets to success. It is the result of preparation, hard work, and learning from failure."- Colin Powell</i></h5>
         </div>
         
         <div class="resource" id="prepresource">
