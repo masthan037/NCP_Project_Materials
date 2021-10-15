@@ -6,14 +6,16 @@ public class Feedbacks {
 	private String thumbs;
 	private String header;
 	private String content;
+	private String date;
 	
-	public Feedbacks(String name, String email, String thumbs, String header, String content) {
+	public Feedbacks(String name, String email, String thumbs, String header, String content, String date) {
 		super();
 		this.name = name;
 		this.email = email;
 		this.thumbs = thumbs;
 		this.header = header;
 		this.content = content;
+		this.date = date;
 	}
 
 	public String getName() {
@@ -56,11 +58,21 @@ public class Feedbacks {
 		this.content = content;
 	}
 
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
 	@Override
 	public String toString() {
 		return "Feedbacks [name=" + name + ", email=" + email + ", thumbs=" + thumbs + ", header=" + header
-				+ ", content=" + content + "]";
+				+ ", content=" + content + ", date=" + date + "]";
 	}
+	
+	
 	
 		
 	

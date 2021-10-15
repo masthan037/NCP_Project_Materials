@@ -30,7 +30,7 @@ public class FeedbackDbUtil {
 			myConn = dataSource.getConnection();
 			
 			// create sql statement
-			String sql = "select * from feedbacks where thumbs='like'";
+			String sql = "select * from feedbacks where thumbs='like' order by date desc limit 6";
 			
 			myStmt = myConn.createStatement();
 			
@@ -47,8 +47,9 @@ public class FeedbackDbUtil {
 				String thumbs = myRs.getString("thumbs");
 				String heading = myRs.getString("heading");
 				String content = myRs.getString("comment");
+				String date = myRs.getString("date");
 				// create new student object
-				Feedbacks tempFeed = new Feedbacks(name,email,thumbs,heading,content);
+				Feedbacks tempFeed = new Feedbacks(name,email,thumbs,heading,content,date);
 				
 				// add it to the list of students
 				feeds.add(tempFeed);				
@@ -94,17 +95,18 @@ public class FeedbackDbUtil {
 			
 			// create sql for insert
 			String sql = "insert into feedbacks "
-					   + "(username,emailID,thumbs,heading,comment) "
-					   + "values (?, ?, ?, ?, ?)";
+					   + "(date,username,emailID,thumbs,heading,comment) "
+					   + "values (?,?, ?, ?, ?, ?)";
 			
 			myStmt = myConn.prepareStatement(sql);
 			
 			// set the param values for the student
-			myStmt.setString(1, theFeedback.getName());
-			myStmt.setString(2, theFeedback.getEmail());
-			myStmt.setString(3, theFeedback.getThumbs());
-			myStmt.setString(4, theFeedback.getHeader());
-			myStmt.setString(5, theFeedback.getContent());
+			myStmt.setString(1, theFeedback.getDate());
+			myStmt.setString(2, theFeedback.getName());
+			myStmt.setString(3, theFeedback.getEmail());
+			myStmt.setString(4, theFeedback.getThumbs());
+			myStmt.setString(5, theFeedback.getHeader());
+			myStmt.setString(6, theFeedback.getContent());
 			// execute sql insert
 			myStmt.execute();
 		}

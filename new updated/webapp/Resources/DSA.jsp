@@ -8,6 +8,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+
+
 <title>Data STructure and Algorithms</title>
 </head>
 <body>
@@ -24,6 +26,12 @@
     </navbar>
     
     <section class="dsaCont">
+    <div class="row align-items-start" id="res_cont">
+        <div class="col-md-4" id="IMG1"><img src="DSAIMG1.jpg" alt="dsa_head"/></div>
+        <div class="col-md-4" id="IMG1"><img src="DSAIMG3.jpg" alt="dsa_head"/></div>
+        <div class="col-md-4" id="IMG2"><img src="DSAIMG2.jpg" alt="dsa_head"/></div>
+    </div>
+    <br><hr><br>
     	<div class="dsa">
     		<h1>Improve your DSA Skills... Here's How..</h1>
     		<p>Here is a step-by-step plan to improve your data structure and algorithm skills:</p>
@@ -32,7 +40,7 @@
 			   The Breadth-Only approach has a problem—you don’t build a strong foundation. Interviews require deep problem-solving knowledge and the ability to code fast and accurately. You only develop these skills with focused preparation.</p>
     		<br/>
     		<br/>
-    		<div class="videoCont"><iframe width="900" height="500" src="https://www.youtube.com/embed/myZKhztFhzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    		<div class="videoCont"><iframe width="900" height="500" src="https://www.youtube.com/embed/myZKhztFhzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block; margin:auto;"></iframe></div>
     		<br/>
     		<br/>
     		<h3>Step 2: Start the Depth-First Approach-make a list of core questions</h3>
@@ -42,6 +50,9 @@
 				<ul><li>Elements of Programming Interviews</li>
 				<li>Cracking the Coding Interview.</li></ul> 
 				<br/>Collectively, they give you a good variety of hand-picked problems.</p>
+			<br>
+			<div style="width:100%; height:max-content;"><embed src="../PDFfiles/CTCIBOOK.pdf" type="application/pdf"   height="1000px" width="900" style="display:block; margin:auto;"></div>	
+			<br><br>
     		<h3>Step 3: Master each data structure.</h3>
     		<p>Now that you have finalized your list, start with the basics. Know every data structure.
 				<br/>
@@ -108,6 +119,9 @@
 				</p>
 				<p>Online Editors to practice - <br/>GDB<a href="https://www.onlinegdb.com/"><i>https://www.onlinegdb.com/</i></a> 
 				</p>
+				<br>
+				<div style="width:100%; height:max-content;"><div data-pym-src="https://www.jdoodle.com/embed/v0/c/gcc-5.3.0/5cQ?stdin=1&arg=1"></div></div>
+				<br>
     		<iframe width="560" height="315" src="https://www.youtube.com/embed/32Ll35mhWg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     		<br/>
     		<br/>
@@ -120,9 +134,13 @@
     		<a href="https://www.hackerearth.com/blog/developers/top-7-algorithms-data-structures-every-programmer-know/"><h6><i>Top 7 algorithms and data structures every programmer should know about..</i></h6></a>
     		<br/>
     		<br/>
+    		
     	</div>
+    	<br><hr><br>
     </section>
     
     <jsp:include page="../footer.jsp"/>
+    
+    <script src=”https://www.jdoodle.com/assets/jdoodle-pym.min.js” type=”text/javascript”></script>
 </body>
 </html>

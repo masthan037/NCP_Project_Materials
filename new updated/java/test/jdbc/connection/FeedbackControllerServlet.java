@@ -4,6 +4,8 @@ package test.jdbc.connection;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
@@ -87,7 +89,11 @@ private FeedbackDbUtil feedbackDbUtil;
 		String content = request.getParameter("comments");
 		
 		// create a new student object
-		Feedbacks thefeedback = new Feedbacks(name, email, thumbs, heading, content);
+		if(name.length()==0) {name="Guest User";};
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");  
+		LocalDateTime now = LocalDateTime.now();  
+		String date = dtf.format(now);  
+		Feedbacks thefeedback = new Feedbacks(name, email, thumbs, heading, content,date);
 		
 		// add the student to the database
 		try {

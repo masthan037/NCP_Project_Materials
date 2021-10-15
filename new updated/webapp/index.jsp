@@ -89,7 +89,7 @@
 	     			<td class="tb_left_bg"></td>
 	     			<td class="tb_left"><img src="guest_usr.png" alt="user_logo"/></td>
 	     			<td class="tb_right">
-	     				<h5><%= tempfeeds.getName() %></h5></br>
+	     				<h5><%= tempfeeds.getName() %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <i><%= tempfeeds.getDate() %></i></h5></br>
 	     				<h3><%= tempfeeds.getHeader() %></h3></br>
 	     				<p><%= tempfeeds.getContent() %></p>
 	     				<hr>
@@ -117,9 +117,10 @@
                     <input type="text" name="email"><br>
                     <br>
                     
+                    <label><b>Like or Unlike?</b></label><br><br>
                     <input type="radio" id="like" name="LikeorUnlike" value="like" onclick="myFun(this)">
   					<label for="like"><img src="likeimg.png" alt="likeIMG" style="width:4rem; height:4rem;"/></label>
-  					
+  					<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
   					<input type="radio" id="unlike" name="LikeorUnlike" value="unlike" onclick="myFun(this)">
                     <label for="unlike"><img src="unlikeimg.png" alt="unlikeIMG" style="width:4rem; height:4rem;"/></label>
                     

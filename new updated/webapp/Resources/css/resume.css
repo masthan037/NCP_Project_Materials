@@ -63,17 +63,43 @@ body{
 .resume{
 	width: 100%;
 	height: max-content;
-	background:radial-gradient(circle, rgba(247,247,247,1) 42%, rgba(125,162,169,1) 100%);
+	background-image: linear-gradient(to bottom, #dad8e9, #dcdcec, #dee0ef, #e0e4f2, #e2e8f5, #dfe7f6, #dde5f6, #dae4f7, #d2ddf6, #cbd7f5, #c4d0f3, #bec9f2);
 }
 
-.res_cont{
-	width:70%;
+#res_cont{
+	width:90%;
 	height:max-content;
-	margin:auto;
-	padding-left:2rem;
-	padding-right:2rem;
-	padding-bottom:2rem;
+	margin-left:auto;
+	margin-right:auto;
 	background-color:#F7F7F7;
+}
+
+#IMG1 img{
+	display:block;
+	margin:auto;
+	width:15rem;
+	height:15rem;	
+}
+
+#IMG2 img{
+	display:block;
+	margin:auto;
+	width:15rem;
+	height:15rem;	
+}
+
+#IMG3 img{
+	display:block;
+	margin:auto;
+	width:15rem;
+	height:15rem;	
+}
+
+#IMG4 img{
+	display:block;
+	margin:auto;
+	width:15rem;
+	height:15rem;	
 }
 
 .headR{
@@ -83,8 +109,14 @@ body{
 	text-align:center;
 }
 
-.res_cont p{
+#res_cont p{
 	width:100%;
+}
+
+.cont img{
+	display:block;
+	margin:auto;
+	width:30rem;
 }
 
 .footer h6{
