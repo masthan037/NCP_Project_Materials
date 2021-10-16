@@ -1,0 +1,308 @@
+@charset "ISO-8859-1";
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+margin: 0px;
+padding: 0px;
+}
+
+body{
+	
+    width: 100%;
+    height: 100%;
+}
+
+.navabrs{
+    width:100%;
+    padding: 0px; 
+}
+
+.logo{
+    color: white;
+    padding: 14px 16px;
+    float: left;
+}
+
+.links{
+    background-color: #333;
+    width: 100%;
+}
+
+.links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+  .links ul  li {
+    float: right;
+  }
+
+  .links ul  li:hover{
+    background-color:rgb(77, 77, 77);
+}
+  
+  .links ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .homepage{
+  	
+    height: auto;
+    width: 100%;
+  }
+
+#rowcol{
+	
+	height:37rem;
+	width:100%;
+}
+
+.col{
+	height:100%;
+}
+
+.headersec{
+	margin:auto;
+	margin-top:3rem;
+	height:100%;
+	width:90%;
+	padding: 1rem;
+	background-color: #F9F9F9;
+}
+
+.headersec h1{
+	width:100%;
+	text-align:center;
+}
+
+.headersec h5{
+	width:100%;
+	padding-left:1rem;
+	padding-right:1rem;
+	text-align:center;
+}
+
+.headersec img{
+	align:center;
+}
+
+.img_trans {
+  	width: 45rem;
+	height: 18rem;
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+  	background-color: #eee;
+  	background-position: center;
+  	background-size: cover;
+  
+  animation: image 8s infinite alternate;
+}
+
+@keyframes image {
+  0% {
+    background-image: url('https://media.geeksforgeeks.org/wp-content/uploads/20190823120241/How-to-get-Placed-in-Product-Based-Companies.png');
+  }
+  100% {
+    background-image: url('https://www.savethestudent.org/uploads/laptop-blue-yellow-background-hands.jpg');
+  }
+}
+
+
+
+.resource{
+	border-left-width: 5px;
+	border-left-style:solid;
+	
+	padding:2rem;
+	margin:auto;
+	margin-top: 2rem;
+	width:80%;
+	height:100%;
+	
+}
+
+.resource ul{
+	list-style:none;
+}
+
+.resource ul li{
+	padding: 0.2rem;
+}
+
+.resource ul li:hover{
+	
+	background-color: #FCFCFC;
+}
+
+.resource ul li a{
+	text-decoration:none;	
+}
+
+p{
+	color:black;
+	font-size: 1.2rem;
+}
+
+.empty_space {
+  	width: 100%;
+	height: 30rem;
+  	animation: empty 8s infinite alternate;
+  	margin-bottom: 2rem;
+}
+
+@keyframes empty {
+  0% {
+    background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX18497242.jpg');
+  }
+  100% {
+    background-image: url('https://www.colourbox.com/preview/19412737-smart-word-cloud.jpg');
+  }
+}
+
+.mid{
+	margin-top:4rem;
+	width:100%;
+	height: max-content;
+}
+
+#mid_IMG{
+	background-color:#f0f0f1;
+	width:100%;
+	height: 40rem;
+}
+
+iframe{
+	display:block;
+	width:100%;
+	height: 30rem;
+	margin-top: 4rem;
+	margin-left: auto;
+}
+
+.col-md-5 img{
+	display:block;
+	width:98%;
+	height:30rem;
+	margin-top:4rem;
+	margin-left:auto;
+}
+
+
+
+
+
+.comment_sec{
+	width:100%;
+	height:9rem;
+}
+
+.comment_sec img{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width:10rem;
+	height:9rem;
+}
+
+.comments{
+  	border-collapse: collapse;
+  	height:max-content;
+  	margin:auto;
+  	width: 95%; 
+  	margin-bottom: 2rem;
+}
+
+
+
+
+
+.tb_left_bg{
+	width:20rem;
+	height:17rem;
+	background-color:#F6F6F8;
+}
+
+.tb_left{
+	width:16rem;
+	height:17rem;
+}
+
+.tb_left img{
+	width: 10rem;
+	height: 10rem;
+}
+
+.tb_right{
+	word-wrap: break-word;
+	height:17rem;
+}
+
+
+
+.feedback{
+  padding-top: 2rem;
+  height: max-content;
+  width: 100%;
+  background-color:#F6F6F8;
+}
+
+.feedback img{
+	width: 20rem;
+	height: 9rem;
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.feedback h3{
+  padding-top: 5rem;
+  color: black;
+  text-align: center;
+}
+
+.fform{
+  
+  padding: 5rem;
+  padding-top: 2rem;
+  margin: 0 auto; 
+  width:40rem;
+}
+
+/* Full-width inputs */
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+
+
