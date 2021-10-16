@@ -120,8 +120,11 @@
 				<p>Online Editors to practice - <br/>GDB<a href="https://www.onlinegdb.com/"><i>https://www.onlinegdb.com/</i></a> 
 				</p>
 				<br>
-				<div style="width:100%; height:max-content;"><div data-pym-src="https://www.jdoodle.com/embed/v0/c/gcc-5.3.0/5cQ?stdin=1&arg=1"></div></div>
-				<br>
+				<h5>Try out the Python compiler!!</h5>
+				<p><i>For the comipler to work please...Under Chrome's Settings > Privacy > Content settings, you have the cookie setting set to "Allow all cookies"</i></p><br>
+				<div style="width=100%; height=400px;"><iframe frameborder="0" width="100%" height="400px" src="https://create.withcode.uk/"><a target="_blank" href="https://create.withcode.uk/">create.withcode.uk</a></iframe></div>
+				<br><br>
+			<h5>Few Videos</h5><br>	
     		<iframe width="560" height="315" src="https://www.youtube.com/embed/32Ll35mhWg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     		<br/>
     		<br/>
@@ -141,6 +144,6 @@
     
     <jsp:include page="../footer.jsp"/>
     
-    <script src=”https://www.jdoodle.com/assets/jdoodle-pym.min.js” type=”text/javascript”></script>
+    
 </body>
 </html>
