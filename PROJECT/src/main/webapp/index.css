@@ -76,6 +76,7 @@ body{
 	height:100%;
 	width:90%;
 	padding: 1rem;
+	box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 	background-color: #F9F9F9;
 }
 
@@ -220,6 +221,7 @@ iframe{
   	margin:auto;
   	width: 95%; 
   	margin-bottom: 2rem;
+  	background-color: white;
 }
 
 
@@ -233,16 +235,21 @@ iframe{
 }
 
 .tb_left{
+	
 	width:16rem;
 	height:17rem;
 }
 
 .tb_left img{
-	width: 10rem;
-	height: 10rem;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width: 8rem;
+	height: 8rem;
 }
 
 .tb_right{
+	
 	word-wrap: break-word;
 	height:17rem;
 }

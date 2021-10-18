@@ -23,54 +23,51 @@
     </navbar>
 
     <section id="question">
+		
+		<div class="row align-items-start" id="Q_row">
+        
 
-        <div class="question-heading">
-            <h2>Questions</h2>
-        </div>
-    <div class="submit-container">
-            <input type="text" class="submit-answer-box" placeholder="Ask a question">
-            <button class="btn btn-primary">Submit</button>
-        </div>
 
-        <div class='question-container'>
-            <div class="question-box">
-
-                <h5>What is Lorem ipsum dolor sit amet?</h5> <a href="discussions.jsp"><img class="arrow-image"
-                        src="https://www.pngitem.com/pimgs/m/11-116514_transparent-left-right-arrow-button-png-dark-blue.png"></a>
-
-            </div>
-            <div class="question-box">
-
-                <h5>What is Lorem ipsum dolor sit amet?</h5>
-                <a href="discussions.jsp"><img class="arrow-image"
-                        src="https://www.pngitem.com/pimgs/m/11-116514_transparent-left-right-arrow-button-png-dark-blue.png"></a>
-            </div>
-            <div class="question-box">
-
-                <h5>What is Lorem ipsum dolor sit amet?</h5>
-                <a href="discussions.jsp"><img class="arrow-image"
-                        src="https://www.pngitem.com/pimgs/m/11-116514_transparent-left-right-arrow-button-png-dark-blue.png"></a>
-            </div>
-            <div class="question-box">
-
-                <h5>What is Lorem ipsum dolor sit amet?</h5>
-                <a href="discussions.jsp"><img class="arrow-image"
-                        src="https://www.pngitem.com/pimgs/m/11-116514_transparent-left-right-arrow-button-png-dark-blue.png"></a>
-            </div>
-            <div class="question-box">
-
-                <h5>What is Lorem ipsum dolor sit amet?</h5>
-                <a href="discussions.jsp"><img class="arrow-image"
-                        src="https://www.pngitem.com/pimgs/m/11-116514_transparent-left-right-arrow-button-png-dark-blue.png"></a>
-            </div>
-            <div class="question-box">
-
-                <h5>What is Lorem ipsum dolor sit amet?</h5>
-                <a href="discussions.jsp"><img class="arrow-image"
-                        src="https://www.pngitem.com/pimgs/m/11-116514_transparent-left-right-arrow-button-png-dark-blue.png"></a>
-            </div>
-        </div>
-
+		
+        <div class="col-md-9" id="question-container">
+	            
+	             <div class="head_block"><img src="questionIMG.png"/></div>
+			     <div class="question-heading">
+		            <h1>Questions</h1>
+		        </div>
+		    	<div class="submit-container">
+		    		<form action="" method="POST">
+		            <input type="text" class="submit-answer-box" placeholder="Ask a question">
+		            <button class="btn btn-primary">Submit</button>
+		            </form>
+		        </div>
+	            
+	            <div class="question-box">
+					<h6>Date</h6>
+	                <h5>What is Lorem ipsum dolor sit amet?</h5> <a href="discussions.jsp"><img class="arrow-image" src="arrow.png"></a>
+	
+	            </div>
+	                    
+	       </div>
+        <div class="col-md-3" id="top_contributors">
+        	<div class="top_head"><h5>Top Contributors</h5></div>
+        	<hr>
+        	<div class="top_usersInfo">
+        		<table>
+        			<tr>
+        			<th>User</th>
+        			<th>Replies</th>
+	        		</tr>
+	        		<tr>
+	        			
+	        			<td><img src="profileIMG.png"/>&emsp; User Name</td>
+	        			
+	        			<td>0</td>
+	        		</tr>
+	        	</table>
+        	</div>
+		</div>
+		</div>
     </section>
 
     <jsp:include page="../footer.jsp"/>

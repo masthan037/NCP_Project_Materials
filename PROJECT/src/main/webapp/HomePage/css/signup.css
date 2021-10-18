@@ -56,7 +56,7 @@ body{
   .signup{
  	width:100%;
  	height:max-content;
- 	background-color:#E1F2F7;
+ 	background-image: linear-gradient(to bottom, #f3ffff, #edfcff, #e9f8ff, #e9f3ff, #ecedff, #ebedff, #e9ecff, #e8ecff, #e0f1ff, #d8f7ff, #d5fbff, #d7fff8);
  }
  
  .Fbox img{
@@ -103,7 +103,7 @@ body{
  	border-style: solid;
  	border-color:#0B4141;
     border-radius: 2rem;
-    background-color:##F6F4F2;
+    background-color:white;
  }
  
 /* Full-width inputs */
