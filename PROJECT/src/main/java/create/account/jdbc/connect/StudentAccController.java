@@ -1,6 +1,7 @@
 package create.account.jdbc.connect;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
@@ -63,14 +64,26 @@ private StudentAccDB studentAccDB;
 		String Email = request.getParameter("Email");
 		String Date = request.getParameter("Date");
 		String Password = request.getParameter("Password");
-		String ConfirmPassward = request.getParameter("ConfirmPassward");
+		String ConfirmPassward = request.getParameter("ConfirmPassword");
 		//create new student object
+		
+		PrintWriter out = response.getWriter();
+
+		
 		StudentAcc newStudent = new StudentAcc(UserName,Firstname,Lastname,Email,Date,Password,ConfirmPassward);
+//		out.println(newStudent.toString());
+		
+		try {
+//		out.println(newStudent.toString());
 		//add student to data base
-		studentAccDB.addStudent(newStudent);
+			studentAccDB.addStudent(newStudent);
 		//Re-direct to main page
 		response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/");  
-		
+		}
+		 catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 
 	

@@ -80,5 +80,13 @@ public class StudentAcc {
 	public void setConfirmPassward(String ConfirmPassward) {
 		this.ConfirmPassward = ConfirmPassward;
 	}
+
+
+	@Override
+	public String toString() {
+		return "StudentAcc [UserName=" + UserName + ", Firstname=" + Firstname + ", Lastname=" + Lastname + ", Email="
+				+ Email + ", Date=" + Date + ", Password=" + Password + ", ConfirmPassward=" + ConfirmPassward + "]";
+	}
+	
 	
 }

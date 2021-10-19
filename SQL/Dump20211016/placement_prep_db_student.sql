@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: placement_prep_db
 -- ------------------------------------------------------
--- Server version	8.0.26
+-- Server version	8.0.21
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,12 +26,11 @@ CREATE TABLE `student` (
   `UserName` varchar(45) NOT NULL,
   `Firstname` varchar(45) NOT NULL,
   `Lastname` varchar(45) DEFAULT NULL,
-  `EmailId` varchar(45) NOT NULL,
-  `DOB` date NOT NULL,
-  `Passward` varchar(45) NOT NULL,
-  `ConfirmPassward` varchar(45) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `DOB` varchar(10) NOT NULL,
+  `Password` varchar(45) NOT NULL,
   PRIMARY KEY (`UserName`),
-  UNIQUE KEY `EmailId_UNIQUE` (`EmailId`)
+  UNIQUE KEY `EmailId_UNIQUE` (`Email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -41,6 +40,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES ('d','d','q','a@gmail.com','0','0');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-19 21:31:33
+-- Dump completed on 2021-10-19 22:06:54

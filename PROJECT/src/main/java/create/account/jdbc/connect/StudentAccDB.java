@@ -67,8 +67,8 @@ public class StudentAccDB {
 			
 			//SQL for insert
 			String sql = "insert into student "
-						 +"(UserName, Firstname, Lastname, Email, Date, Password, ConfirmPassward) "
-						 +"values (?,?,?,?,?,?,?)";
+						 +"(UserName, Firstname, Lastname, Email, DOB, Password) "
+						 +"values (?,?,?,?,?,?)";
 			myStmt = myConn.prepareStatement(sql);
 			//Set param values
 			myStmt.setString(1, newStudent.getUserName());
@@ -77,7 +77,7 @@ public class StudentAccDB {
 			myStmt.setString(4, newStudent.getEmail());
 			myStmt.setString(5, newStudent.getDate());
 			myStmt.setString(6, newStudent.getPassword());
-			myStmt.setString(7, newStudent.getConfirmPassward());
+			
 			myStmt.execute();
 		}
 		finally {

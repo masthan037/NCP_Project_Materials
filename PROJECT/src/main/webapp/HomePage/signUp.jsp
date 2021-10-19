@@ -31,7 +31,7 @@
 		<div class="Fbox">
 	 		<img src="signinlogo.png" alt="logo"/>
 	 		<h2>Sign Up</h2>
-	 		<form action="StudentAccController" method="POST">
+	 		<form action="../StudentAccController" method="POST">
 		 		<div class="container">
 				    <label for="UserName"><b>Username</b></label><br/>
 				    <input type="text" placeholder="Enter Username" name="UserName" required><br/>
@@ -42,11 +42,11 @@
 				    <label for="Email"><b>EmailId</b></label><br/>
 				    <input type="email" placeholder="Enter EmailId" name="Email" required>
 				    <label for="Date"><b>Date of Birth</b></label><br/>
-				    <input type="date" placeholder="dd-mm-yyyy" name="Passward" required>
-				    <label for="Passward"><b>Password</b></label><br/>
-				    <input type="password" placeholder="*********" name="Passward" required>
-				    <label for="Passward"><b>Confirm Password</b></label><br/>
-				    <input type="password" placeholder="*********" name="ConfirmPassward" required>
+				    <input type="date" placeholder="dd-mm-yyyy" name="Date" required>
+				    <label for="Password"><b>Password</b></label><br/>
+				    <input type="password" placeholder="*********" name="Password" required>
+				    <label for="Password"><b>Confirm Password</b></label><br/>
+				    <input type="password" placeholder="*********" name="ConfirmPassword" required>
 				    <br/><br/>
 				    <button type="submit">Create Account</button>
 		  		</div>
