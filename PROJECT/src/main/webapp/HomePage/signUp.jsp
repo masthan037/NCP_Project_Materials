@@ -1,3 +1,4 @@
+<%@ page import="java.util.*, create.account.jdbc.connect.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -30,7 +31,7 @@
 		<div class="Fbox">
 	 		<img src="signinlogo.png" alt="logo"/>
 	 		<h2>Sign Up</h2>
-	 		<form action="#" method="post">
+	 		<form action="StudentAccController" method="POST">
 		 		<div class="container">
 				    <label for="UserName"><b>Username</b></label><br/>
 				    <input type="text" placeholder="Enter Username" name="UserName" required><br/>
