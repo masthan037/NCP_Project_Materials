@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.annotation.Resource;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -78,6 +79,9 @@ private StudentAccDB studentAccDB;
 		//add student to data base
 			studentAccDB.addStudent(newStudent);
 		//Re-direct to main page
+//			request.setAttribute("Created", "Account Created");
+//			RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
+//			rd.include(request, response);;
 		response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/");  
 		}
 		 catch (Exception e) {
