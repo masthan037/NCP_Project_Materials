@@ -55,6 +55,27 @@ private StudentAccDB studentAccDB;
 		
 	}
 
+	
+	
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+		
+			// Read the parameters
+			
+				try {
+					addStudent(request, response);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 
+			// List students in MVC
+		
+	}
+	
 	private void addStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
 		
@@ -65,50 +86,33 @@ private StudentAccDB studentAccDB;
 		String Email = request.getParameter("Email");
 		String Date = request.getParameter("Date");
 		String Password = request.getParameter("Password");
-		String ConfirmPassward = request.getParameter("ConfirmPassword");
+		String ConfirmPassword = request.getParameter("ConfirmPassword");
 		//create new student object
 		
-		PrintWriter out = response.getWriter();
+//		PrintWriter out = response.getWriter();
 
 		
-		StudentAcc newStudent = new StudentAcc(UserName,Firstname,Lastname,Email,Date,Password,ConfirmPassward);
+		StudentAcc newStudent = new StudentAcc(UserName,Firstname,Lastname,Email,Date,Password,ConfirmPassword);
 //		out.println(newStudent.toString());
 		
 		try {
 //		out.println(newStudent.toString());
-		//add student to data base
-			studentAccDB.addStudent(newStudent);
-		//Re-direct to main page
-//			request.setAttribute("Created", "Account Created");
-//			RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
-//			rd.include(request, response);;
-		response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/");  
+			
+				//add student to data base
+					studentAccDB.addStudent(newStudent);
+				//Re-direct to main page
+		//			request.setAttribute("Created", "Account Created");
+		//			RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
+		//			rd.include(request, response);;
+				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/");  
+			
 		}
-		 catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	throws ServletException, IOException {
-		
-			// Read the parameters
-			try {
-				addStudent(request, response);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			// List students in MVC
-		
-	}
-	
 	
 
 }

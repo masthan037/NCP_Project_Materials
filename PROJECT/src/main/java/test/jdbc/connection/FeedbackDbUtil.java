@@ -57,6 +57,9 @@ public class FeedbackDbUtil {
 			
 			return feeds;		
 		}
+		
+				
+		
 		finally {
 			// close JDBC objects
 			close(myConn, myStmt, myRs);
@@ -83,6 +86,48 @@ public class FeedbackDbUtil {
 		}
 	}
 
+	public List<Integer> getFeedbackCount() throws Exception {
+		
+		List<Integer> feed_count = new ArrayList<>();
+		
+		Connection myConn = null;
+		Statement myStmt = null;
+		ResultSet myRs = null;
+		
+		try {
+			// get a connection
+			myConn = dataSource.getConnection();
+			
+			// create sql statement
+			String sql = "select count(*) as Total, count(case when thumbs = 'like' then 1 else null end) as likes, count(case when thumbs = 'unlike' then 1 else null end) as unlikes from feedbacks";
+			
+			myStmt = myConn.createStatement();
+			
+			// execute query
+			myRs = myStmt.executeQuery(sql);
+			
+			// process result set
+			while (myRs.next()) {
+				
+				// retrieve data from result set row
+				
+				int Total = myRs.getInt("Total");
+				int likes = myRs.getInt("likes");
+				int unlikes = myRs.getInt("unlikes");
+				
+				// add it to the list 
+				feed_count.add(Total);
+				feed_count.add(likes);
+				feed_count.add(unlikes);
+			}
+			
+			return feed_count;		
+		}
+		finally {
+			// clean up JDBC objects
+			close(myConn, myStmt, null);
+		}
+	}
 	
 	public void addFeedbacks(Feedbacks theFeedback) throws Exception {
 

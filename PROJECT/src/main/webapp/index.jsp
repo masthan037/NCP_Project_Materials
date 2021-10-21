@@ -18,6 +18,23 @@
     checkboxes.forEach((item) => {
       if (item !== checkbox) item.checked =  false
     })
+    
+    }
+  
+  function validate_feedback(){
+	var heading = document.feed_form.heading.value;
+	var comments = document.feed_form.comments.value;
+	if(heading==""){
+		alert("Please Enter a vaild Heading for Feedback");
+		document.feed_form.heading.focus();
+		return false;
+	}
+	if(comments.length<10){
+		alert("Please Enter a vaild Comments for Feedback");
+		document.feed_form.comments.focus();
+		return false;
+	}
+  } 
 </script>
 
 </head>
@@ -25,6 +42,7 @@
 	<%
 	// get the students from the request object (sent by servlet)
 	List<Feedbacks> thefeeds = (List<Feedbacks>) request.getAttribute("FEEDS_LIST");
+	List<Integer> feedcount = (List<Integer>) request.getAttribute("FEEDS_COUNT");
 	%>
 	
 	<navbar class="navbars">
@@ -102,12 +120,35 @@
 	     	</table>
 	     
      </div>
+     
+     <div class="divider"></div>
+     
+     <div class="thumbs_percent">
+     	<div class="row align-items-start" id="thumbsrow">
+	     	<div class="col-md-8">
+	     		<img src="feedqoute.png" class="feedqoute"/>
+	     	</div>
+	     	<div class="col-md-4">
+	     		<table class="thumbs_tb">
+		     	<tr>
+		     		<td><img src="smile.jpg"/></td>
+		     		<td><img src="sad.jpg"/></td>
+		     	</tr>
+		     	<tr>
+		     		<td><h3 style="color:green;"><%= feedcount.get(1)%></h3></td>
+		     		<td><h3 style="color:red;"><%= feedcount.get(2)%></h3></td>
+		     	</tr>
+		     	
+	     		</table>
+	     	</div>
+	     </div>	
+     </div>
         
         <div class="feedback">
         	<img src="feedback.png" alt="img"/>
             <h3>Feedback</h3>
             
-            <form action="FeedbackControllerServlet" method="POST" class="fform">
+            <form name="feed_form" action="FeedbackControllerServlet" method="POST" class="fform">
 				<div class="container">
                     <label for="Name"><b>Your Name:</b></label><br/>
                     <input type="text" name="realname"><br>
@@ -132,7 +173,7 @@
                     <label for="comments"><b>Your Comments:</b></label><br/>
                     <textarea name="comments" rows="10" cols="60"></textarea><br><br>
                     
-                    <button type="submit">Submit</button>
+                    <button type="submit" onClick="return validate_feedback();">Submit</button>
                   </div>   
             </form>
         </div>

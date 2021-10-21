@@ -9,6 +9,32 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <title>SignUp</title>
+
+<script>
+	function validate_details(){
+		var UserName = document.account_form.UserName.value;
+		var Password = document.account_form.Password.value;
+		var ConfirmPassword = document.account_form.ConfirmPassword.value;
+		if(UserName==""){
+			alert("Please Enter a vaild Username");
+			document.account_form.UserName.focus();
+			return false;
+		}
+		if(Password==ConfirmPassword && Password<10){
+			alert("Please Enter a Strong Password");
+			document.account_form.Password.focus();
+			return false;
+		}
+		
+		if(Password!=ConfirmPassword){
+			alert("Please Enter the same Confirm Password");
+			document.account_form.ConfirmPassword.focus();
+			return false;
+		}
+  } 
+
+</script>
+
 </head>
 
 <body>
@@ -31,7 +57,7 @@
 		<div class="Fbox">
 	 		<img src="signinlogo.png" alt="logo"/>
 	 		<h2>Sign Up</h2>
-	 		<form action="../StudentAccController" method="POST">
+	 		<form name="account_form" action="../StudentAccController" method="POST">
 		 		<div class="container">
 				    <label for="UserName"><b>Username</b></label><br/>
 				    <input type="text" placeholder="Enter Username" name="UserName" required><br/>

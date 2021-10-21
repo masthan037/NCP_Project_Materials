@@ -97,8 +97,12 @@ private FeedbackDbUtil feedbackDbUtil;
 		
 		// add the student to the database
 		try {
-			feedbackDbUtil.addFeedbacks(thefeedback);
-			response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/");  
+			if(heading.length()==0) {response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/"); }
+			if(content.length()<10) {response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/"); }
+			else {
+				feedbackDbUtil.addFeedbacks(thefeedback);
+				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/");
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -114,10 +118,11 @@ private FeedbackDbUtil feedbackDbUtil;
 			PrintWriter out = response.getWriter();
 			// get students from db util
 			List<Feedbacks> feeds = feedbackDbUtil.getFeedbacks();
+			List<Integer> feed_count = feedbackDbUtil.getFeedbackCount();
 			out.println(feeds);
 			// add students to the request
 			request.setAttribute("FEEDS_LIST", feeds);
-					
+			request.setAttribute("FEEDS_COUNT", feed_count);		
 			// send to JSP page (view)
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
 			dispatcher.forward(request, response);
