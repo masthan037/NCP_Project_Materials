@@ -88,7 +88,7 @@ public class FeedbackDbUtil {
 
 	public List<Integer> getFeedbackCount() throws Exception {
 		
-		List<Integer> feed_count = new ArrayList<>();
+		List<Integer> feed_count = new ArrayList<Integer>();
 		
 		Connection myConn = null;
 		Statement myStmt = null;

@@ -10,10 +10,30 @@
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
 <title>LogIn</title>
+
+<script> 
+function validate()
+{ 
+     var UserName = document.form.UserName.value; 
+     var Passward = document.form.Passward.value;
+ 
+     if (UserName==null || UserName=="")
+     { 
+     alert("Username cannot be blank"); 
+     return false; 
+     }
+     else if(Passward==null || Passward=="")
+     { 
+     alert("Password cannot be blank"); 
+     return false; 
+     } 
+}
+</script> 
+
 </head>
 
 <body>
-<spam>${Created}</spam>
+<spam><h2>${Created}</h2></spam>
 	<navbar class="navbars">
 	        <div class="links">
 	            <p class="logo">Placement Preparation Guiders</p>
@@ -33,12 +53,12 @@
 		<div class="Fbox">
 		<img src="loginlogo.png" alt="logo"/>
 		<h2>LogIn</h2>
-		<form action="LoginCheck.jsp" method="post">
+		<form action="LoginController" method="post" onsubmit="return validate()">
 		  <div class="container">
 		    <label for="UserName"><b>Username</b></label><br/>
 		    <input type="text" placeholder="Enter Username" name="UserName" required><br/>
 		    <label for="Passward"><b>Password</b></label><br/>
-		    <input type="password" placeholder="*********" name="Passward" required>
+		    <input type="password" placeholder="*********" name="Password" required>
 		    <p><a href="#">Forgot your Password?</a></p>
 		    <button type="submit">Login</button>
 		  </div>

@@ -11,7 +11,7 @@
 String UserName = request.getParameter("UserName");
 out.print(UserName);
 %>
-<h1> Welcome UserName</h1>
+<h1> Welcome ${UserName}</h1>
 <div>
 <h2>Resources</h2>
 <a href = "../DoubtClearance/discussions.jsp">Doubts Discussions</a><br/>

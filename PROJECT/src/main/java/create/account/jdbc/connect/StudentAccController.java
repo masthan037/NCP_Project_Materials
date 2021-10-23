@@ -104,7 +104,7 @@ private StudentAccDB studentAccDB;
 		//			request.setAttribute("Created", "Account Created");
 		//			RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
 		//			rd.include(request, response);;
-				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/");  
+				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/HomePage.jsp");  
 			
 		}
 		catch (Exception e) {
