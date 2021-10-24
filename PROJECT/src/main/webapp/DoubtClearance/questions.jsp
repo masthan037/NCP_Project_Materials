@@ -57,8 +57,8 @@
 		        </div>
 	            
 	            <div class="question-box">
-					<h6>Date</h6>
-	                <h5>What is Lorem ipsum dolor sit amet?</h5> <a href="discussions.jsp"><img class="arrow-image" src="arrow.png"></a>
+					<h6>2020-01-10</h6>
+	                <h5>Why we need to do algorithm analysis??</h5> <a href="discussions.jsp"><img class="arrow-image" src="arrow.png"></a>
 	
 	            </div>
 	                    

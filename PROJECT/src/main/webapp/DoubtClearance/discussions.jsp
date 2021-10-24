@@ -40,7 +40,7 @@
 	        <div class="discussion_cont">
 	            
 			    <div class="discussion-heading">
-		            <h2>What is Lorem ipsum dolor sit amet?</h2>
+		            <h2>Why we need to do algorithm analysis??</h2>
 		        </div>
 		    	<div class="submit-container">
 		    		<form name="ans_form" action="" method="POST">
@@ -59,12 +59,7 @@
 						</tr>
 						<tr class="ans_row">
 							<td class="answer">
-							edewkmfmwekfnwefefefefef<br>
-							efefef<br>
-							efe<br>
-							fefe<br>
-							fe<br>
-							feeeeeeeeeeeeeeeeeeeee
+							A problem can be solved in more than one ways. So, many solution algorithms can be derived for a given problem. We analyze available algorithms to find and implement the best suitable algorithm.
 							</td>
 						</tr>
 					</table>

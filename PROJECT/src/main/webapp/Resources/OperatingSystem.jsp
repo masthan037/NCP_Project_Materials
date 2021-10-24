@@ -22,7 +22,12 @@
             </ul>
         </div>
     </navbar>
+    
     <div class="container" style="margin-left:140px">
+    	
+    	<a href='https://www.free-counters.org/'>https://www.free-counters.org/</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=1e3f0582c2ce385949fae410233793c91cb00b20'></script>
+		<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/879895/t/1"></script>
+    	
         <div class="sidebar">
             <div class="section-topics">
                 <h4 class="section-title">Topics</h4>
