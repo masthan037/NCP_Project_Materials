@@ -31,7 +31,7 @@ CREATE TABLE `feedbacks` (
   `heading` varchar(45) DEFAULT 'Good',
   `comment` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`SID`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `feedbacks` (
 
 LOCK TABLES `feedbacks` WRITE;
 /*!40000 ALTER TABLE `feedbacks` DISABLE KEYS */;
-INSERT INTO `feedbacks` VALUES (12,'2021-10-14','Guest User','a@gmail.com','like','Good','Nice website'),(13,'2021-10-01','Guest User',NULL,'like','a','a'),(14,'2021-10-15','Guest User','a@gmail.com','like','Good','nice'),(15,'2021-10-19','a','a@gmail.com','like','a','aa');
+INSERT INTO `feedbacks` VALUES (12,'2021-10-14','Guest User','a@gmail.com','like','Good','Nice website'),(14,'2021-10-15','Guest User','a@gmail.com','like','Good','nice'),(22,'2021-10-21','rohit','kgtanuvas@gmail.com','unlike','okay','less contents'),(25,'2021-10-24','ram','ram@example.com','like','Awesome','Fantastic Website and well organized content'),(26,'2021-10-24','kg','kgtanuvas@gmail.com','like','fantastic','nice website with loads of useful content');
 /*!40000 ALTER TABLE `feedbacks` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-19 22:06:54
+-- Dump completed on 2021-10-24 15:02:53

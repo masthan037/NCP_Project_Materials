@@ -8,7 +8,21 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel = "stylesheet" href = "css/questions.css">
+
+<script>
+	function  validate_question(){
+		var question = document.Q_form.qbox.value;
+		if(question.length<=10){
+			alert("Please Enter a vaild Question");
+			document.Q_form.qbox.focus();
+			return false;
+		}
+	}
+</script>
+
 </head>
+
+
 <body>
 	<navbar class="navbars">
         <div class="links">
@@ -36,9 +50,9 @@
 		            <h1>Questions</h1>
 		        </div>
 		    	<div class="submit-container">
-		    		<form action="" method="POST">
-		            <input type="text" class="submit-answer-box" placeholder="Ask a question">
-		            <button class="btn btn-primary">Submit</button>
+		    		<form name="Q_form" action="" method="POST">
+		            <input name="qbox" type="text" class="submit-answer-box" placeholder="Ask a question">
+		            <button class="btn btn-primary" onCLick="return validate_question();" type="submit">Submit</button>
 		            </form>
 		        </div>
 	            

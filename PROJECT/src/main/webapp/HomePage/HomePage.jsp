@@ -1,4 +1,5 @@
 <%-- --%>
+<%@ page import="java.util.*, Login.account.jdbc.connect.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -33,6 +34,10 @@ function validate()
 </head>
 
 <body>
+		<%
+		// get the students from the request object (sent by servlet)
+		String usercount = String.valueOf(request.getAttribute("USER_COUNTS"));
+		%>
 <spam><h2>${Created}</h2></spam>
 	<navbar class="navbars">
 	        <div class="links">
@@ -47,13 +52,17 @@ function validate()
 	    </navbar>
 	    
     	<section class="login">
+    	<div><%if(usercount!="null") { out.println("Placement Preparation Guiders registered COUNT NUMBER:"+ usercount);};%></div>
 		<div class = "HomePage">
 		<h1>Placement Preparation Guiders</h1>
 		<h4>Practice, Prepare and ace in your Placements</h4>
 		<div class="Fbox">
 		<img src="loginlogo.png" alt="logo"/>
 		<h2>LogIn</h2>
-		<form action="LoginController" method="post" onsubmit="return validate()">
+		<p style="color:red;">
+		<%if(request.getParameter("error")!=null) { out.println(request.getParameter("error"));};%>
+		</p>
+		<form action="../LoginController" method="post" onsubmit="return validate()">
 		  <div class="container">
 		    <label for="UserName"><b>Username</b></label><br/>
 		    <input type="text" placeholder="Enter Username" name="UserName" required><br/>
@@ -69,7 +78,7 @@ function validate()
 		</div>
 		</section>
 		
-		<jsp:include page="../footer.jsp"/>
+		<jsp:include page="../footer.jsp"/> 
 
 </body>
 </html>

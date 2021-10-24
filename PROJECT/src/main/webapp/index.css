@@ -12,6 +12,7 @@ body{
 	
     width: 100%;
     height: 100%;
+ 	background-color: #fff;
 }
 
 .navabrs{
@@ -230,15 +231,15 @@ iframe{
 
 
 .tb_left_bg{
-	width:20rem;
-	height:17rem;
+	width:0rem;
+	height:10rem;
 	background-color:#F6F6F8;
 }
 
 .tb_left{
 	
 	width:16rem;
-	height:17rem;
+	height:0rem;
 }
 
 .tb_left img{
@@ -252,7 +253,7 @@ iframe{
 .tb_right{
 	
 	word-wrap: break-word;
-	height:17rem;
+	height:10rem;
 }
 
 .divider{

@@ -100,22 +100,17 @@
 	     	</div>
 	     	
 	     	<div class="comment_sec"><img src="commentsIMG.jpg" alt="IMG"/></div>
-	     	<table class="comments">
-	     	
+	     	<table class="comments">	
 	     	<% for (Feedbacks tempfeeds : thefeeds) { %>
 	     		<tr>
-	     			<td class="tb_left_bg"></td>
-	     			<td class="tb_left"><img src="profileIMG.png" alt="user_logo"/></td>
+	     			<td class="tb_left"><img src="profileIMG.png" style="height:50px;width:50px;" alt="user_logo"/></td>
 	     			<td class="tb_right">
-	     				<h5><%= tempfeeds.getName() %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <i><%= tempfeeds.getDate() %></i></h5></br>
-	     				<h3><%= tempfeeds.getHeader() %></h3></br>
+	     				<p><%= tempfeeds.getName() %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <i><%= tempfeeds.getDate() %></i></p></br>
+	     				<p><%= tempfeeds.getHeader() %></p>
 	     				<p><%= tempfeeds.getContent() %></p>
 	     				<hr>
 	     			</td>
-	     			
-	     			
 	     		</tr>
-	     		
 	     		<% } %>
 	     	</table>
 	     

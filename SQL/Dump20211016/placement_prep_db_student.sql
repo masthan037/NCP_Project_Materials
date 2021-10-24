@@ -40,7 +40,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('d','d','q','a@gmail.com','0','0');
+INSERT INTO `student` VALUES ('atinvento','Rohit','Surya','at@gmail.com','04-12-1999','rohit'),('s','s','s','atinvento@gmail.com','2021-10-22','dd');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-19 22:06:54
+-- Dump completed on 2021-10-24 15:02:53

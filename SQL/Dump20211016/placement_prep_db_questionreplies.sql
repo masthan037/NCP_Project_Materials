@@ -16,8 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping routines for database 'placement_prep_db'
+-- Table structure for table `questionreplies`
 --
+
+DROP TABLE IF EXISTS `questionreplies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `questionreplies` (
+  `RepID` int NOT NULL AUTO_INCREMENT,
+  `QID` int NOT NULL,
+  `Reply` varchar(500) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`RepID`),
+  KEY `QID_idx` (`QID`),
+  CONSTRAINT `QID` FOREIGN KEY (`QID`) REFERENCES `question` (`QID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `questionreplies`
+--
+
+LOCK TABLES `questionreplies` WRITE;
+/*!40000 ALTER TABLE `questionreplies` DISABLE KEYS */;
+/*!40000 ALTER TABLE `questionreplies` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

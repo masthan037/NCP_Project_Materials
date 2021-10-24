@@ -8,6 +8,18 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel = "stylesheet" href = "css/discussions.css">
+
+<script>
+	function  validate_reply(){
+		var ans = document.ans_form.ans_box.value;
+		if(ans.length<=10){
+			alert("Please Enter a vaild reply");
+			document.ans_form.ans_box.focus();
+			return false;
+		}
+	}
+</script>
+
 </head>
 <body>
 	<navbar class="navbars">
@@ -31,9 +43,9 @@
 		            <h2>What is Lorem ipsum dolor sit amet?</h2>
 		        </div>
 		    	<div class="submit-container">
-		    		<form action="" method="POST">
-		            <input type="text" class="submit-answer-box" placeholder="Your response..">
-		            <button class="btn btn-primary">Submit</button>
+		    		<form name="ans_form" action="" method="POST">
+		            <input name="ans_box" type="text" class="submit-answer-box" placeholder="Your response..">
+		            <button class="btn btn-primary" type="submit" onCLick="return validate_reply()">Submit</button>
 		            </form>
 		        </div>
 	            

@@ -7,11 +7,9 @@
 <link rel = "stylesheet" href = "css/dsa.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-
-
-<title>Data STructure and Algorithms</title>
+<title>DATA STRUCTURES AND ALGORITHMS</title>
 </head>
+<body>
 <body>
 	<navbar class="navbars">
         <div class="links">
@@ -24,16 +22,35 @@
             </ul>
         </div>
     </navbar>
-    
-    <section class="dsaCont">
-    <div class="row align-items-start" id="res_cont">
-        <div class="col-md-4" id="IMG1"><img src="DSAIMG1.jpg" alt="dsa_head"/></div>
-        <div class="col-md-4" id="IMG1"><img src="DSAIMG3.jpg" alt="dsa_head"/></div>
-        <div class="col-md-4" id="IMG2"><img src="DSAIMG2.jpg" alt="dsa_head"/></div>
-    </div>
-    <br><hr><br>
-    	<div class="dsa">
-    		<h1>Improve your DSA Skills... Here's How..</h1>
+    <div class="container" style="margin-left:140px">
+        <div class="sidebar">
+            <div class="section-topics">
+                <h4 class="section-title">Topics</h4>
+                <ul>
+               <li><a href="#"><b>2D Arrays</b></a></li>
+                    <li><a href="#"><b>Strings</b></a></li>
+                    <li><a href="#"><b>Linked List</b></a></li>
+                    <li><a href="#"><b>Stack</b></a></li>
+                    <li><a href="#"><b>Queue</b></a></li>
+                    <li><a href="#"><b>Hash Table & Hash Set</b></a></li>
+                    <li><a href="#"><b>Heap</b></a></li>
+                    <li><a href="#"><b>Graphs</b></a></li>
+                    <li><a href="#"><b>Binary Tree</b></a></li>
+                      <li><a href="#"><b>Binary Search Tree</b></a></li>
+                        <li><a href="#"><b>Trie</b></a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="main-content">
+        	<div class="main-content-container"><h1 style="color:orange;">&emsp;&emsp;&emsp;&emsp;DATA STRUCTURES AND ALGORITHMS</h1></div>
+        	
+            <h1 class="main-heading" style="color: rgb(0, 0, 0);"><img class="dsa-img" height="350px" width="300px" src="DSAIMG1.jpg">
+            <img class="dsa-img" " height="350px" width="300px" src="DSAIMG3.jpg">
+            <img class="dsa-img"  height="350px" width="300px" src="DSAIMG2.jpg">
+            </h1>
+       
+            <div class="main-content-container">
+       <h1>Improve your DSA Skills... Here's How..</h1>
     		<p>Here is a step-by-step plan to improve your data structure and algorithm skills:</p>
     		<h3>Step 1: Understand Depth vs. Breadth</h3>
 			<p>We all have that friend who has solved 500 coding problems. They love to wear it as a badge of honor. But when it comes to interviews, they fail miserably. This is a very common scenario. It’s what we call the “Breadth-Only” approach. They are solely focused on solving as many problems as they can.
@@ -59,21 +76,9 @@
 				Learn how to use each data structure in your language.
 				<br/>
 				Also, learn how to implement them. Yes, implement them by hand. Many people ignore this, but it’s extremely important. Interviewers can ask you about data structure internals. Many problems modify data structures or re-engineer them for a specific use case. To utilize them fully, you need to know how they work.</p>
-    		
-    		<h4>Here is a list of data structures to master:</h4>
-				<ol><li>Arrays and Lists</li>
-				<li>2D Arrays</li>
-				<li>Strings</li>
-				<li>Linked List</li>
-				<li>Stack</li>
-				<li>Queue</li>
-				<li>Hash Table & Hash Set</li>
-				<li>Heap</li>
-				<li>Graphs</li>
-				<li>Binary Tree</li>
-				<li>Binary Search Tree</li>
-				<li>Trie</li></ol>
-			<p>Online Courses - (<a href="https://www.geeksforgeeks.org/data-structures-and-algorithms-online-courses-free-and-paid/"><i>DSA_GFG_selfpaced course</i></a>)</p>
+          
+           
+            <p>Online Courses - (<a href="https://www.geeksforgeeks.org/data-structures-and-algorithms-online-courses-free-and-paid/"><i>DSA_GFG_selfpaced course</i></a>)</p>
 			<h3>Step 4: Spaced Repetition</h3>
 			<p>Alright. You made a list of questions and you started solving them. Here’s a common question we get:"I solve many questions but can’t solve them a week later! How do I remember solutions?"<br/>
 				The key is to not remember solutions. The key is to practice them. When you see a problem, you should immediately be able to break it down and re-create the solution. This is different from rote learning. You’re recognizing different components, breaking them down and solving the problem.
@@ -109,6 +114,8 @@
 				
 				</p>
 				<br/>
+				  </div>
+				 <div class="main-content-container">
 				<p>Few Popular websites - 
 				<ul>
 				<li>InterviewBit - (<a href="https://www.interviewbit.com/practice/"><i>interviewbit-practice/</i></a>)</li>
@@ -138,12 +145,9 @@
     		<br/>
     		<br/>
     		
-    	</div>
-    	<br><hr><br>
-    </section>
-    
-    <jsp:include page="../footer.jsp"/>
-    
-    
+            </div>
+        </section>
+    </div>
+<jsp:include page="../footer.jsp"/>
 </body>
 </html>

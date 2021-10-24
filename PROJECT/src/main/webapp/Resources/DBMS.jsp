@@ -10,7 +10,8 @@
 <title>Data Base Management System</title>
 </head>
 <body>
-<navbar class="navbars">
+<body>
+	<navbar class="navbars">
         <div class="links">
             <p class="logo">Placement Preparation Guiders</p>
             <ul>
@@ -21,11 +22,30 @@
             </ul>
         </div>
     </navbar>
-    
-    <section class = "dbms">
-    <div class="dbmsCont">
-    <h1>What is DBMS!!</h1>
-    		<p><b>Database</b> is a collection of related data and data is a collection of facts and figures that
+    <div class="container" style="margin-left:140px">
+        <div class="sidebar">
+            <div class="section-topics">
+                <h4 class="section-title">Topics</h4>
+                <ul>
+                    <li><a href="#"><b>DBMS Tutorial</b></a></li>
+                    <li><a href="#"><b>ER Model</b></a></li>
+                    <li><a href="#"><b>Relational Model</b></a></li>
+                    <li><a href="#"><b>Relational DB Design</b></a></li>
+                    <li><a href="#"><b>Storage and File Structure</b></a></li>
+                    <li><a href="#"><b>Indexing and Hashing</b></a></li>
+                    <li><a href="#"><b>Transaction and Concurrency</b></a></li>
+                    <li><a href="#"><b>Backup and Recovery</b></a></li>
+                    <li><a href="#"><b>DBMS Useful Rescources</b></a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="main-content">
+        	<div class="main-content-container"><h1 style="color:#28B5B5;">&emsp;&emsp;&emsp;&emsp;DATABASE MANAGEMENT SYSTEM</h1></div>
+        	
+            <h1 class="main-heading" style="color: rgb(0, 0, 0);"><img class="dbms-img" style="border:5px solid darkcyan;" height="350px" width="900px" src="DBMS.jpg"></h1>
+       
+            <div class="main-content-container">
+                <p><h3><b>Database </b></h3> is a collection of related data and data is a collection of facts and figures that
                     can be
                     processed
                     to produce information.
@@ -41,36 +61,6 @@
                     manipulate,
                     and
                     produce information.</p>
-    	<h3>Steps to Master DBMS</h3>
-				<ol><li>Introduction to DBMS</li>
-				<li>Introduction to RDBMS (DBMS != RDBMS)</li>
-				<li>Relational Data Base Design</li>
-				<li>Storage and file structure</li>
-				<li>Keys and Normalization</li>
-				<li>SQL</li>
-				<li>PL/SQL</li>
-				<li>Transaction Management</li>
-				<li>Deadlocks(Diff in OS!!)</li>
-				</ol>
-    		<div class="videoCont"><iframe width="900" height="500" src="https://www.youtube.com/embed/BQBGORBPytw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    		<br/>
-    		<br/>
-    		<h4 class="section-title">Topics</h4>
-                <ul>
-                    <li><a href="#">DBMS Tutorial</a></li>
-                    <li><a href="#">ER Model</a></li>
-                    <li><a href="#">Relational Model</a></li>
-                    <li><a href="#">Relational DB Design</a></li>
-                    <li><a href="#">Storage and File Structure</a></li>
-                    <li><a href="#">Indexing and Hashing</a></li>
-                    <li><a href="#">Transaction and Concurrency</a></li>
-                    <li><a href="#">Backup and Recovery</a></li>
-                    <li><a href="#">DBMS Useful Rescources</a></li>
-                    
-                </ul>
-                <br/>
-
-            	<div class="main-content-container">
                 <h3 style="color: rgb(172, 172, 236);">Characteristics</h3>
                 <p>Traditionally, data was organized in file formats. DBMS was a new concept then, and all the research
                     was
@@ -78,7 +68,7 @@
                     to make it overcome the deficiencies in traditional style of data management. A modern DBMS has the
                     following characteristics −<br>
 
-                    <b>Real-world entity − </b>A modern DBMS is more realistic and uses real-world entities to
+                    <b>Real-world entity : </b>A modern DBMS is more realistic and uses real-world entities to
                     design its
                     architecture.
                     It uses the behavior and attributes too. For example, a school database may use students as an
@@ -86,25 +76,25 @@
                     and
                     their age as an attribute.<br><br>
 
-                    <b>Relation-based tables −</b> DBMS allows entities and relations among them to form tables. A user
+                    <b>Relation-based tables :</b> DBMS allows entities and relations among them to form tables. A user
                     can
                     understand
                     the architecture of a database just by looking at the table names.<br><br>
 
-                    <b>Isolation of data and application −</b> A database system is entirely different than its data. A
+                    <b>Isolation of data and application :</b> A database system is entirely different than its data. A
                     database is
                     an
                     active entity, whereas data is said to be passive, on which the database works and organizes. DBMS
                     also
                     stores metadata, which is data about data, to ease its own process.<br><br>
 
-                    <b>Less redundancy −</b> DBMS follows the rules of normalization, which splits a relation when any
+                    <b>Less redundancy :</b> DBMS follows the rules of normalization, which splits a relation when any
                     of its
                     attributes is having redundancy in values. Normalization is a mathematically rich and scientific
                     process
                     that reduces data redundancy.<br><br>
 
-                    <b>Consistency −</b> Consistency is a state where every relation in a database remains consistent.
+                    <b>Consistency :</b> Consistency is a state where every relation in a database remains consistent.
                     There
                     exist
                     methods and techniques, which can detect attempt of leaving database in inconsistent state. A DBMS
@@ -113,14 +103,14 @@
                     file-processing
                     systems.<br><br>
 
-                    <b>Query Language − </b>DBMS is equipped with query language, which makes it more efficient to
+                    <b>Query Language : </b>DBMS is equipped with query language, which makes it more efficient to
                     retrieve and
                     manipulate data. A user can apply as many and as different filtering options as required to retrieve
                     a
                     set
                     of data. Traditionally it was not possible where file-processing system was used.<br><br>
 
-                    <b>ACID Properties − </b>DBMS follows the concepts of Atomicity, Consistency, Isolation, and
+                    <b>ACID Properties : </b>DBMS follows the concepts of Atomicity, Consistency, Isolation, and
                     Durability
                     (normally
                     shortened as ACID). These concepts are applied on transactions, which manipulate data in a database.
@@ -128,21 +118,21 @@
                     properties help the database stay healthy in multi-transactional environments and in case of
                     failure.<br><br>
 
-                    <b>Multiuser and Concurrent Access −</b> DBMS supports multi-user environment and allows them to
+                    <b>Multiuser and Concurrent Access :</b> DBMS supports multi-user environment and allows them to
                     access and
                     manipulate data in parallel. Though there are restrictions on transactions when users attempt to
                     handle
                     the
                     same data item, but users are always unaware of them.<br><br>
 
-                    <b>Multiple views −</b> DBMS offers multiple views for different users. A user who is in the Sales
+                    <b>Multiple views :</b> DBMS offers multiple views for different users. A user who is in the Sales
                     department
                     will
                     have a different view of database than a person working in the Production department. This feature
                     enables
                     the users to have a concentrate view of the database according to their requirements.<br><br>
 
-                    <b>Security −</b> Features like multiple views offer security to some extent where users are unable
+                    <b>Security :</b> Features like multiple views offer security to some extent where users are unable
                     to
                     access
                     data
@@ -160,27 +150,26 @@
                     on
                     the disk as traditional file systems, it is very hard for miscreants to break the code.
                 </p>
-                </div>
-                <br/>
-                <h3 style="text-align: center; margin-top: 100px;">MySql Preperation</h3>
+            </div>
+        </section>
+    </div>
+    <div >
+    <h3 class=" main-content-container_prep" style="text-align: center; margin-top: 100px;">MySql Preperation Videos</h3>
+    </div>
     <div class="mysql-section">
-        <div class="video1"><iframe width="400" height="200" src="https://www.youtube.com/embed/2bW3HuaAUcY"
+        <div class="video1  "><iframe width="400" height="200" src="https://www.youtube.com/embed/2bW3HuaAUcY"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe></div>
-        <div class="video2"><iframe width="400" height="200" src="https://www.youtube.com/embed/2bW3HuaAUcY"
+        <div class="video2  "><iframe width="400" height="200" src="https://www.youtube.com/embed/2bW3HuaAUcY"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe></div>
-        <div class="video3"><iframe width="400" height="200" src="https://www.youtube.com/embed/2bW3HuaAUcY"
+        <div class="video3 "><iframe width="400" height="200" src="https://www.youtube.com/embed/2bW3HuaAUcY"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe></div>
     </div>
-    </div>
-    </section>
-    
-    
 <jsp:include page="../footer.jsp"/>
 </body>
 </html>
