@@ -22,8 +22,14 @@
     }
   
   function validate_feedback(){
+	var checkbox = document.feed_form.LikeorUnlike.value;
 	var heading = document.feed_form.heading.value;
 	var comments = document.feed_form.comments.value;
+	if(checkbox===null){
+		alert("This Field is required!");
+		document.feed_form.LikeorUnlike.focus();
+		return false;
+	}
 	if(heading==""){
 		alert("Please Enter a vaild Heading for Feedback");
 		document.feed_form.heading.focus();
@@ -105,8 +111,8 @@
 	     		<tr>
 	     			<td class="tb_left"><img src="profileIMG.png" style="height:50px;width:50px;" alt="user_logo"/></td>
 	     			<td class="tb_right">
-	     				<p><%= tempfeeds.getName() %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <i><%= tempfeeds.getDate() %></i></p></br>
-	     				<p><%= tempfeeds.getHeader() %></p>
+	     				<p><%= tempfeeds.getName() %>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <i><b><%= tempfeeds.getDate() %></b></i></p></br>
+	     				<h5><b><%= tempfeeds.getHeader() %></b></h5>
 	     				<p><%= tempfeeds.getContent() %></p>
 	     				<hr>
 	     			</td>
