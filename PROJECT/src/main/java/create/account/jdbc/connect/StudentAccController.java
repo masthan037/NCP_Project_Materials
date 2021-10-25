@@ -55,9 +55,6 @@ private StudentAccDB studentAccDB;
 		
 	}
 
-	
-	
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -76,22 +73,42 @@ private StudentAccDB studentAccDB;
 		
 	}
 	
+	
 	private void addStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
 		
 		//read student info
 		String UserName = request.getParameter("UserName");
+		
 		String Firstname = request.getParameter("Firstname");
 		String Lastname = request.getParameter("Lastname");
 		String Email = request.getParameter("Email");
 		String Date = request.getParameter("Date");
 		String Password = request.getParameter("Password");
 		String ConfirmPassword = request.getParameter("ConfirmPassword");
+		
+		if(studentAccDB.CheckUsernameExists(UserName)) {
+			response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=UserName Already exist!!");
+		}
+		else if(UserName.length()<5 ) {
+			response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=Ensure UserName should be more than 5 characters");
+		}
+		
+		else if(Password.equals(ConfirmPassword) && Password.length()<6) {
+			response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=Enter stronger Password(Atleast 6* char) ");
+		}
+		
+		else if(!Password.equals(ConfirmPassword)) {
+			//response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/HomePage.jsp");
+			//String usercount = Logindb.CountUser();
+			response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=Ensure Password matches with confirm Password");	
+			
+		}
 		//create new student object
 		
 //		PrintWriter out = response.getWriter();
 
-		
+		else {
 		StudentAcc newStudent = new StudentAcc(UserName,Firstname,Lastname,Email,Date,Password,ConfirmPassword);
 //		out.println(newStudent.toString());
 		
@@ -104,7 +121,8 @@ private StudentAccDB studentAccDB;
 		//			request.setAttribute("Created", "Account Created");
 		//			RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
 		//			rd.include(request, response);;
-				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/HomePage.jsp");  
+					
+				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=Account Created successful...Please Login");  
 			
 		}
 		catch (Exception e) {
@@ -112,7 +130,6 @@ private StudentAccDB studentAccDB;
 			e.printStackTrace();
 		}
 	}
-
 	
-
+	}
 }

@@ -3,6 +3,7 @@ package create.account.jdbc.connect;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,44 @@ public class StudentAccDB {
 		dataSource = theDataSource;
 	}
 	
+	
+	public boolean CheckUsernameExists(String username)
+	{
+	    boolean usernameExists = false;
+	    Connection myConn = null;
+ 		Statement myStmt = null;
+ 		ResultSet myRs = null;
+ 		
+ 
+         String userNameDB = "";
+         try
+         {
+        	 myConn = dataSource.getConnection();//Fetch database connection object
+        	 myStmt = myConn.createStatement(); //Statement is used to write queries. Read more about it.
+        	 myRs = myStmt.executeQuery("select * from student"); //the table name is users and userName,password are columns. Fetching all the records and storing in a resultSet.
+ 
+             while(myRs.next()) // Until next row is present otherwise it return false
+             {
+              userNameDB = myRs.getString("UserName"); //fetch the values present in database
+               if(username.equals(userNameDB))
+               {
+            	   usernameExists = true;
+            	   break;
+            	 
+               }
+             }
+         }
+             catch(SQLException e)
+             {
+                e.printStackTrace();
+             }
+         finally {
+ 			// close JDBC objects
+ 			close(myConn, myStmt, myRs);
+ 		}
+	    
+	    return usernameExists;
+	}
 	public List<StudentAcc> getStudents() throws Exception{
 		
 		List<StudentAcc> students = new ArrayList<StudentAcc>();
@@ -23,6 +62,7 @@ public class StudentAccDB {
 		Connection myConn = null;
 		Statement myStmt = null;
 		ResultSet myRs = null;
+		
 		
 		// First get connection
 		

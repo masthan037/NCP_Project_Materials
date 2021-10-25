@@ -38,6 +38,7 @@
 </head>
 
 <body>
+
 	<navbar class="navbars">
 	        <div class="links">
 	            <p class="logo">Placement Preparation Guiders</p>
@@ -57,6 +58,9 @@
 		<div class="Fbox">
 	 		<img src="signinlogo.png" alt="logo"/>
 	 		<h2>Sign Up</h2>
+	 		<p style="color:red;">
+		<%if(request.getParameter("errors")!=null) { out.println(request.getParameter("errors"));};%>
+		</p>
 	 		<form name="account_form" action="../StudentAccController" method="POST">
 		 		<div class="container">
 				    <label for="UserName"><b>Username</b></label><br/>
