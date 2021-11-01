@@ -1,6 +1,7 @@
 package updateProfile.jdbc.connect;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -15,29 +16,38 @@ public class UpdateProfileDB {
 		this.dataSource = dataSource;
 	}
 	public void UpdateDetails(UpdateProfile updateProfile, String CurrentUserName,
-			String Firstname,String Lastname,String Email,String Date) {
+			String Firstname,String Lastname,String Email,String Date) throws SQLException {
 		// TODO Auto-generated method stub
 		
-		 Connection myConn = null;
-	 		Statement myStmt = null;
-	 		ResultSet myRs = null;
-	 		
-	 		 try
-	         {
-	        	 myConn = dataSource.getConnection();//Fetch database connection object
-	        	 myStmt = myConn.createStatement(); //Statement is used to write queries. Read more about it.
-	        	  myStmt.executeUpdate("Update student set Firstname='"+Firstname+"',Lastname='"+Lastname+"',Email='"+Email+"',DOB='"+Date+"' where UserName='"+CurrentUserName+";'");
-	        	
-	             
-	         }
-	             catch(SQLException e)
-	             {
-	                e.printStackTrace();
-	             }
-	         finally {
-	 			// close JDBC objects
-	 			close(myConn, myStmt, myRs);
-	 		}
+		Connection myConn = null;
+		PreparedStatement myStmt = null;
+
+		try {
+			// get db connection
+			myConn = dataSource.getConnection();
+			
+			// create SQL update statement
+			String sql = "update student "
+						+ "set Firstname=?, Lastname=?, Email=?, DOB=? "
+						+ "where UserName="+"'"+CurrentUserName+"'";
+			
+			// prepare statement
+			myStmt = myConn.prepareStatement(sql);
+			
+			// set params
+			myStmt.setString(1, Firstname);
+			myStmt.setString(2, Lastname);
+			myStmt.setString(3, Email);
+			myStmt.setString(4, Date);
+			
+			
+			// execute SQL statement
+			myStmt.execute();
+		}
+		finally {
+			// clean up JDBC objects
+			close(myConn, myStmt, null);
+		}
 		    
 		
 	}

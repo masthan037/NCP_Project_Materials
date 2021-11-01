@@ -77,7 +77,7 @@ private UpdateProfileDB updateProfileDB;
 		// TODO Auto-generated method stub
 		String Firstname = request.getParameter("Firstname");
 		String Lastname = request.getParameter("Lastname");
-		String Email = request.getParameter("Email");
+		String Email = request.getParameter("email");
 		String Date = request.getParameter("Date");
 		
 		HttpSession session = request.getSession(false);
@@ -91,7 +91,7 @@ private UpdateProfileDB updateProfileDB;
 
 			
 				
-					updateProfileDB.UpdateDetails(updateProfile,temp[0],Firstname,Lastname,Email,Date);
+					updateProfileDB.UpdateDetails(updateProfile,temp[1],Firstname,Lastname,Email,Date);
 		
 					
 				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/Profile.jsp?errors=Update Success!!...");  

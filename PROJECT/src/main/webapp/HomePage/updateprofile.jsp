@@ -1,3 +1,4 @@
+<%@ page import="java.util.*, updateProfile.jdbc.connect.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -16,13 +17,13 @@
 	<jsp:include page="../navbar.jsp"/>
 	 <div class="box">
         <h3 style=" color: rgb(35, 161, 63);text-align: center;">UPDATE PROFILE</h3><br>
-        <form action="">
+        <form action="../UpdateProfileContoller" method="POST">
             <label for="firstname">Firstname</label><br>
-            <input type="text"><br>
+            <input type="text" name="Firstname" required><br>
             <label for="lastname">Lastname</label><br>
-            <input type="text"><br>
+            <input type="text" name="Lastname" required><br>
             <label for="email">Email</label><br>
-            <input type="email"><br>
+            <input type="email" name="email" required><br>
             <label for="Date">Date of Birth</label><br />
             <input type="date" placeholder="dd-mm-yyyy" name="Date" required>
             <button class="btn btn-info" type="submit" style="color:white">Update Profile</button>
