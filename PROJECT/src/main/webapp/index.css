@@ -15,45 +15,7 @@ body{
  	background-color: #fff;
 }
 
-.navabrs{
-    width:100%;
-    padding: 0px; 
-}
 
-.logo{
-    color: white;
-    padding: 14px 16px;
-    float: left;
-}
-
-.links{
-    background-color: #333;
-    width: 100%;
-}
-
-.links ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    
-  }
-  
-  .links ul  li {
-    float: right;
-  }
-
-  .links ul  li:hover{
-    background-color:rgb(77, 77, 77);
-}
-  
-  .links ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
 
   .homepage{
   	

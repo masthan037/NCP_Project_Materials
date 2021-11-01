@@ -39,17 +39,7 @@ function validate()
 		String usercount = String.valueOf(request.getAttribute("USER_COUNTS"));
 		%>
 <spam><h2>${Created}</h2></spam>
-	<navbar class="navbars">
-	        <div class="links">
-	            <p class="logo">Placement Preparation Guiders</p>
-	            <ul>
-	                <li><a href="../HomePage/HomePage.jsp">LogIn/SignUp</a></li>
-	                <li><a href="../DoubtClearance/questions.jsp">Doubt Assistance</a></li>
-	                <li><a href="http://localhost:8080/Placement_Preparation_Portal/#prepresource">Preparation Resources</a></li>
-	                <li><a href="http://localhost:8080/Placement_Preparation_Portal/">Home</a></li>
-	            </ul>
-	        </div>
-	    </navbar>
+	<jsp:include page="../navbar.jsp"/>
 	    
     	<section class="login">
     	<div><%if(usercount!="null") { out.println("Placement Preparation Guiders registered COUNT NUMBER:"+ usercount);};%></div>
@@ -68,7 +58,7 @@ function validate()
 		    <input type="text" placeholder="Enter Username" name="UserName" required><br/>
 		    <label for="Passward"><b>Password</b></label><br/>
 		    <input type="password" placeholder="*********" name="Password" required>
-		    <p><a href="#">Forgot your Password?</a></p>
+		    <p><a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/forgotpassword.jsp">Forgot your Password?</a></p>
 		    <button type="submit">Login</button>
 		  </div>
 		</form>

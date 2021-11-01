@@ -6,7 +6,7 @@
 <head>
 	<%
 	// get the students from the request object (sent by servlet)
-	String userinfo = String.valueOf(request.getAttribute("userinfo"));
+	String userinfo = String.valueOf(session.getAttribute("userinfo"));
 	String[] temp = userinfo.split("\\+");
 	%>
 	
@@ -173,6 +173,16 @@ button:hover {
   opacity: 0.8;
 }
 
+a{
+	text-decoration:none
+}
+
+.edit{
+	display:block;
+	margin:auto;
+	width:10rem;
+}
+
 /* Extra style for the cancel button (red) */
 .cancelbtn {
   width: auto;
@@ -234,18 +244,8 @@ span.psw {
 
 </head>
 <body>
-	<navbar class="navbars">
-        <div class="links">
-            <p class="logo">Placement Preparation Guiders</p>
-            <ul>
-                <li><a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/HomePage.jsp">Logout</a></li>
-                <li><a href="http://localhost:8080/Placement_Preparation_Portal/DoubtClearance/questions.jsp">Doubt Assistance</a></li>
-                <li><a href="http://localhost:8080/Placement_Preparation_Portal/#prepresource">Preparation Resources</a>
-                </li>
-                <li><a href="http://localhost:8080/Placement_Preparation_Portal/">Home</a></li>
-            </ul>
-        </div>
-    </navbar>
+	<jsp:include page="../navbar.jsp"/>
+	
     <div class="box">
         <h1 style="color: rgb(38, 177, 38);margin-left: 60px;">Welcome to profile page</h1>
     </div>
@@ -270,6 +270,10 @@ span.psw {
                 <td><%= temp[5] %></td>
             </tr>
         </tbody>
+       </table>
+        <a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/updateprofile.jsp"><button class="edit">Edit profile</button></a>
+        <br>
+        <a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/resetpassword.jsp"><button class="edit">Reset Password</button></a>
 
 </body>
 </html>

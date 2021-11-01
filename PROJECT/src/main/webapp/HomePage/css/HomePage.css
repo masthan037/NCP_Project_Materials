@@ -177,4 +177,15 @@ span.psw {
   }
 }
 
- 
+
+ .footer{
+    height: 10rem;
+    width: 100%;
+    background-color: #333;
+    
+}
+.footer h6{
+  color: white;
+  text-align: center;
+  padding-top: 8rem;
+} 

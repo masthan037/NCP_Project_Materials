@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
 import create.account.jdbc.connect.StudentAcc;
@@ -83,9 +84,11 @@ private LoginDB Logindb;
 	        String[] temp = userValidate.split("\\+");
 	        if(temp[0].equals("SUCCESS")) //If function returns success string then user will be rooted to Home page
 	         {
-	             request.setAttribute("userinfo", userValidate);//with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
+	        	 HttpSession session = request.getSession(true);
 	             
-	             request.getRequestDispatcher("/HomePage/Profile.jsp").forward(request, response);//RequestDispatcher is used to send the control to the invoked page.
+	        	 session.setAttribute("userinfo", userValidate);//with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
+	             
+	             response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/Profile.jsp");//RequestDispatcher is used to send the control to the invoked page.
 	           //  response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/main/webapp/AfterLogIn/AfterLogin.jsp");
 	         }
 	         else
