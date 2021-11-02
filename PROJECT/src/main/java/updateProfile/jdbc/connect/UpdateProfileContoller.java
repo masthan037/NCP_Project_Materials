@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 
+import Login.account.jdbc.connect.LoginAcc;
+import Login.account.jdbc.connect.LoginDB;
+
 
 
 /**
@@ -27,6 +30,7 @@ public class UpdateProfileContoller extends HttpServlet {
      */
 	
 private UpdateProfileDB updateProfileDB;
+private LoginDB Logindb;
 	
 	@Resource(name="jdbc/placement_prep_db")
 	private DataSource dataSource;
@@ -38,6 +42,7 @@ private UpdateProfileDB updateProfileDB;
 		// create our student db util ... and pass in the conn pool / datasource
 		try {
 			updateProfileDB = new UpdateProfileDB(dataSource);
+			Logindb = new LoginDB(dataSource);
 		}
 		catch (Exception exc) {
 			throw new ServletException(exc);
@@ -95,13 +100,23 @@ private UpdateProfileDB updateProfileDB;
 			 String error = "Update Success...";
 			 
 		        request.setAttribute("error", error);
-		 
- RequestDispatcher requestDispatcher = request.getRequestDispatcher("/HomePage/Profile.jsp");
+		        
+		        
+		        LoginAcc Loginacc = new LoginAcc(temp[1], temp[6]); //creating object for LoginBean class, which is a normal java class, contains just setters and getters. Bean classes are efficiently used in java to access user information wherever required in the application.
+		   	 
+		        Loginacc.setUserName(temp[1]); 
+		        Loginacc.setPassward(temp[6]);
+		        String userValidate = Logindb.authenticateUser(Loginacc);
+		        
+		        session = request.getSession();
+				session.removeAttribute("userinfo");
+				session.setAttribute("userinfo", userValidate);
+		        
+		        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/HomePage/Profile.jsp");
 		 
 		        requestDispatcher.forward(request, response);
 					
-				//response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/Profile.jsp?errors=Update Success!!...");  
-			
+				
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block

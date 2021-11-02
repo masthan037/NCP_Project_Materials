@@ -48,7 +48,7 @@ public class LoginDB {
                if(userName.equals(userNameDB) && password.equals(passwordDB))
                {
             	  
-            	  String userinfo = "SUCCESS"+"+"+myRs.getString("UserName")+"+"+myRs.getString("Firstname")+"+"+myRs.getString("Lastname")+"+"+myRs.getString("Email")+"+"+myRs.getString("DOB");          			 
+            	  String userinfo = "SUCCESS"+"+"+myRs.getString("UserName")+"+"+myRs.getString("Firstname")+"+"+myRs.getString("Lastname")+"+"+myRs.getString("Email")+"+"+myRs.getString("DOB")+"+"+myRs.getString("Password");          			 
                   return userinfo; ////If the user entered values are already present in the database, which means user has already registered so return a SUCCESS message.
                }
              }
