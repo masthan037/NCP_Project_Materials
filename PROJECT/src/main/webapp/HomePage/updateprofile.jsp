@@ -14,6 +14,14 @@
     <title>Update Profile</title>
 </head>
 <body>
+<%
+		// get the students from the request object (sent by servlet)
+		String error = String.valueOf(request.getAttribute("error"));
+	%>
+	
+	<p style="color:red;">
+		<% out.println(error);%>
+		</p>
 	<jsp:include page="../navbar.jsp"/>
 	 <div class="box">
         <h3 style=" color: rgb(35, 161, 63);text-align: center;">UPDATE PROFILE</h3><br>

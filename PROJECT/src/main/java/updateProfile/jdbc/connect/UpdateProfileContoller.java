@@ -3,6 +3,7 @@ package updateProfile.jdbc.connect;
 import java.io.IOException;
 
 import javax.annotation.Resource;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
@@ -89,12 +90,17 @@ private UpdateProfileDB updateProfileDB;
 		
 		try {
 
+			updateProfileDB.UpdateDetails(updateProfile,temp[1],Firstname,Lastname,Email,Date);
 			
-				
-					updateProfileDB.UpdateDetails(updateProfile,temp[1],Firstname,Lastname,Email,Date);
-		
+			 String error = "Update Success...";
+			 
+		        request.setAttribute("error", error);
+		 
+ RequestDispatcher requestDispatcher = request.getRequestDispatcher("/HomePage/Profile.jsp");
+		 
+		        requestDispatcher.forward(request, response);
 					
-				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/Profile.jsp?errors=Update Success!!...");  
+				//response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/Profile.jsp?errors=Update Success!!...");  
 			
 		}
 		catch (Exception e) {

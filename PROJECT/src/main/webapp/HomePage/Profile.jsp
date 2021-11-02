@@ -244,11 +244,21 @@ span.psw {
 
 </head>
 <body>
+	<%
+		// get the students from the request object (sent by servlet)
+		String error = String.valueOf(request.getAttribute("error"));
+	%>
+	
+	
 	<jsp:include page="../navbar.jsp"/>
 	
     <div class="box">
         <h1 style="color: rgb(38, 177, 38);margin-left: 60px;">Welcome to profile page</h1>
     </div>
+    <p style="color:red;">
+		<%if(error.equals("Update Success...")) { out.println(error);}%>
+		</p>
+		
     <table class="table my-5" style="width: 1000px;
     margin-right: auto;
     margin-left: auto;">
