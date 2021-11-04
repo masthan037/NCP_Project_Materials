@@ -1,3 +1,4 @@
+<%@ page import="java.util.*, resetPassword.jdbc.connect.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -16,11 +17,15 @@
 	<jsp:include page="../navbar.jsp"/>
 	<div class="box">
         <h3 style="color: rgb(13, 107, 107); text-align: center;">RESET PASSWORD</h3><br>
-        <form action="">
-            <label for="newPassword">New Password</label><br>
-            <input type="password"><br>
-            <label for="confirmNewPassword">Confirm New Password</label><br>
-            <input type="password"><br><br>
+        <p style="color:red;">
+		<%if(request.getParameter("errors")!=null) { out.println(request.getParameter("errors"));};%>
+		</p>
+        <form action="../ResetPasswordController" method = "POST">
+            <label for="Password"><b>Password</b></label><br/>
+				    <input type="password" placeholder="*********" name="NewPassword" required>
+				    <label for="Password"><b>Confirm Password</b></label><br/>
+				    <input type="password" placeholder="*********" name="ConfirmNewPassword" required>
+				    <br><br>
             <button class="btn btn-info" type="submit" style="color:white">Update</button>
         </form>
     </div>

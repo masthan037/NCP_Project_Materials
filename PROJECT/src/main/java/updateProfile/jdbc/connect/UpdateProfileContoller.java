@@ -97,7 +97,7 @@ private LoginDB Logindb;
 
 			updateProfileDB.UpdateDetails(updateProfile,temp[1],Firstname,Lastname,Email,Date);
 			
-			 String error = "Update Success...";
+			 String error = "Update Success!!.";
 			 
 		        request.setAttribute("error", error);
 		        

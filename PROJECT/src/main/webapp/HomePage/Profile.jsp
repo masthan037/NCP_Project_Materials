@@ -255,9 +255,7 @@ span.psw {
     <div class="box">
         <h1 style="color: rgb(38, 177, 38);margin-left: 60px;">Welcome to profile page</h1>
     </div>
-    <p style="color:red;">
-		<%if(error.equals("Update Success...")) { out.println(error);}%>
-		</p>
+   
 		
     <table class="table my-5" style="width: 1000px;
     margin-right: auto;
@@ -283,7 +281,13 @@ span.psw {
        </table>
         <a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/updateprofile.jsp"><button class="edit">Edit profile</button></a>
         <br>
+         <p style="color:red;  font-weight: 900; text-align: center;">
+		<%if(error.equals("Update Success!!.")) { out.println(error);}%>
+		</p>
+		<br>
         <a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/resetpassword.jsp"><button class="edit">Reset Password</button></a>
-
+	<br><p style="color:red;  font-weight: 900; text-align: center;">
+		<%if(request.getParameter("errors")!=null) { out.println(request.getParameter("errors"));};%>
+		</p>
 </body>
 </html>

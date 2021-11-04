@@ -99,8 +99,7 @@ private StudentAccDB studentAccDB;
 		}
 		
 		else if(!Password.equals(ConfirmPassword)) {
-			//response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/HomePage.jsp");
-			//String usercount = Logindb.CountUser();
+			
 			response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=Ensure Password matches with confirm Password");	
 			
 		}
