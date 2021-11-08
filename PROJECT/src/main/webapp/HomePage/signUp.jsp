@@ -63,6 +63,12 @@
 				    <input type="email" placeholder="Enter EmailId" name="Email" required>
 				    <label for="Date"><b>Date of Birth</b></label><br/>
 				    <input type="date" placeholder="dd-mm-yyyy" name="Date" required>
+				    <label for="gender"><b>Gender</b></label><br/>
+				    <select name="gender">
+				    	<option value="Male" selected>Male</option>
+				    	<option value="female">Female</option>
+				    </select>
+				    <br>
 				    <label for="Password"><b>Password</b></label><br/>
 				    <input type="password" placeholder="*********" name="Password" required>
 				    <label for="Password"><b>Confirm Password</b></label><br/>

@@ -56,7 +56,10 @@ private LoginDB Logindb;
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		try {
 			String usercount = Logindb.CountUser();
-			request.setAttribute("USER_COUNTS", usercount);		
+			request.setAttribute("USER_COUNTS", usercount);	
+			
+			
+			
 			// send to JSP page (view)
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/HomePage/HomePage.jsp");
 			dispatcher.forward(request, response);
@@ -84,8 +87,19 @@ private LoginDB Logindb;
 	        String[] temp = userValidate.split("\\+");
 	        if(temp[0].equals("SUCCESS")) //If function returns success string then user will be rooted to Home page
 	         {
+	        	String userreplies="";
+	        	String userq="";
+				try {
+					userreplies = Logindb.CountReplies(temp[1]);
+					userq = Logindb.CountQ(temp[1]);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				userValidate = userValidate+userreplies+userq;	
+	        	
 	        	 HttpSession session = request.getSession(true);
-	             
+	        	 //System.out.println(userValidate);
 	        	 session.setAttribute("userinfo", userValidate);//with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
 	             
 	             response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/Profile.jsp");//RequestDispatcher is used to send the control to the invoked page.

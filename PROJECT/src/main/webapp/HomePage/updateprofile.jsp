@@ -14,26 +14,28 @@
     <title>Update Profile</title>
 </head>
 <body>
-<%
+	<%
+		// get the students from the request object (sent by servlet)
+		String userinfo = String.valueOf(session.getAttribute("userinfo"));
+		String[] temp = userinfo.split("\\+");
+		
 		// get the students from the request object (sent by servlet)
 		String error = String.valueOf(request.getAttribute("error"));
 	%>
 	
-	<p style="color:red;">
-		<% out.println(error);%>
-		</p>
+	
 	<jsp:include page="../navbar.jsp"/>
 	 <div class="box">
         <h3 style=" color: rgb(35, 161, 63);text-align: center;">UPDATE PROFILE</h3><br>
         <form action="../UpdateProfileContoller" method="POST">
             <label for="firstname">Firstname</label><br>
-            <input type="text" name="Firstname" required><br>
+            <input type="text" name="Firstname" placeholder=<%= temp[2] %> required><br>
             <label for="lastname">Lastname</label><br>
-            <input type="text" name="Lastname" required><br>
+            <input type="text" name="Lastname" placeholder=<%= temp[3] %> required><br>
             <label for="email">Email</label><br>
-            <input type="email" name="email" required><br>
+            <input type="email" name="email" placeholder=<%= temp[4] %> required><br>
             <label for="Date">Date of Birth</label><br />
-            <input type="date" placeholder="dd-mm-yyyy" name="Date" required>
+            <input type="date" placeholder="dd-mm-yyyy" name="Date" placeholder=<%= temp[5] %> required>
             <button class="btn btn-info" type="submit" style="color:white">Update Profile</button>
         </form>
     </div>

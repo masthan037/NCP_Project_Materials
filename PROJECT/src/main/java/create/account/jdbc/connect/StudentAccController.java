@@ -86,6 +86,7 @@ private StudentAccDB studentAccDB;
 		String Date = request.getParameter("Date");
 		String Password = request.getParameter("Password");
 		String ConfirmPassword = request.getParameter("ConfirmPassword");
+		String Gender = request.getParameter("gender");
 		
 		if(studentAccDB.CheckUsernameExists(UserName)) {
 			response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=UserName Already exist!!");
@@ -108,7 +109,7 @@ private StudentAccDB studentAccDB;
 //		PrintWriter out = response.getWriter();
 
 		else {
-		StudentAcc newStudent = new StudentAcc(UserName,Firstname,Lastname,Email,Date,Password,ConfirmPassword);
+		StudentAcc newStudent = new StudentAcc(UserName,Firstname,Lastname,Email,Date,Password,ConfirmPassword,Gender);
 //		out.println(newStudent.toString());
 		
 		try {

@@ -1,4 +1,5 @@
 <%@ page import="java.util.*, Login.account.jdbc.connect.*" %>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -11,7 +12,6 @@
 	%>
 	
 <meta charset="ISO-8859-1">
-<link rel = "stylesheet" href = "css/Profile.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <title><%= temp[1] %>'s Profile</title>
@@ -239,8 +239,84 @@ span.psw {
   padding-top: 8rem;
 }
 
+.main {
+width:200px;
+border:1px solid black;
+
+}
+
+.month {
+background-color:black;
+font:bold 12px verdana;
+color:white;
+}
+
+.daysofweek {
+background-color:gray;
+font:bold 12px verdana;
+color:white;
+}
+
+.days {
+font-size: 12px;
+font-family:verdana;
+color:black;
+background-color: lightyellow;
+padding: 2px;
+}
+
+.days #today{
+font-weight: bold;
+color: red;
+}
 
 </style>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+ // Load Charts and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+
+    // Draw the pie chart for Sarah's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(drawReplyChart);
+
+    // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(drawQuestionChart);
+
+    function drawReplyChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Column 1');
+      data.addColumn('number', 'Replies Count');
+      data.addRows([
+        ['Total Replies', <%= temp[9] %>],
+        ['Your Replies', <%= temp[8] %>]
+      ]);
+
+      var options = {title:'Your Contribution to Valuable Answers',
+                     width:500,
+                     height:300};
+
+      var chart = new google.visualization.PieChart(document.getElementById('Reply_chart_div'));
+      chart.draw(data, options);
+    }
+
+    function drawQuestionChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Column 1');
+      data.addColumn('number', 'Question Count');
+      data.addRows([
+        ['Total Questions', <%= temp[11] %>],
+        ['Your Questions', <%= temp[10] %>]
+      ]);
+
+      var options = {title:'Your Contribution in posting helpful Questions',
+                     width:500,
+                     height:300};
+
+      var chart = new google.visualization.PieChart(document.getElementById('Question_chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+<script type="text/javascript" src="basiccalender.js"></script> 
 
 </head>
 <body>
@@ -252,15 +328,43 @@ span.psw {
 	
 	<jsp:include page="../navbar.jsp"/>
 	
+     <p style="color:red;  width: 100%; height: max-content; font-weight: 900; text-align: center; margin-top:2rem;">
+	    <%if(error.equals("Update Success!!.")) { out.println(error);};%> 
+		<%if(request.getParameter("errors")!=null) { out.println(request.getParameter("errors"));};%>
+	</p>
+	
     <div class="box">
-        <h1 style="color: rgb(38, 177, 38);margin-left: 60px;">Welcome to profile page</h1>
+        <h1 style="color: rgb(38, 177, 38);margin-left: 60px;">Welcome <%= temp[1] %></h1>
     </div>
    
 		
-    <table class="table my-5" style="width: 1000px;
-    margin-right: auto;
-    margin-left: auto;">
+    <table class="table my-5" style=" width: 1000px;margin-right: auto;margin-left: auto;">
         <thead class="thead-dark">
+        	<tr>
+        	<th colspan="1" style="width:50%; height:10rem;">
+        	<% if(temp[7].equals("Male")){
+        	
+        	out.print("<img style='width:10rem; height:10rem; display: block; margin-right:auto;' src='https://img.freepik.com/free-vector/portrait-shy-teenager-format-clothing-isolated-circle-icon-personage-with-blush-cheeks-student-school-college-university-unsure-brunette-face-relaxed-guy-photo-vector_87689-2396.jpg?size=338&ext=jpg'/>");
+        	}
+        	else{
+        	out.print("<img style='width:10rem; height:10rem; display: block; margin-right:auto;' src='https://img.freepik.com/free-vector/female-character-portrait-isolated-circle-icon-avatar-personage-with-long-hair-blush-cheeks-timid-teenage-girl-cute-teenager-photo-media-girlfriend-vector-flat-style_87689-2395.jpg?size=338&ext=jpg'/>");
+        	}%>
+        	</th>
+        	<th colspan="2" style="width:50%; height:10rem;">
+        		<script type="text/javascript" >
+				var todaydate = new Date();
+				var curmonth = todaydate.getMonth()+1; //get current month (1-12)
+				var curyear=todaydate.getFullYear(); //get current year
+				
+				document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
+				</script>
+			</th>	
+			<th colspan="2" style="width:50%; height:10rem;">
+				<iframe src="https://free.timeanddate.com/clock/i826lzlh/n553/szw110/szh110/cf100/hnce1ead6" frameborder="0" width="150" height="150"></iframe>
+				
+			
+			</th>
+        	</tr>
             <tr>
                 <th scope="col">Username</th>
                 <th scope="col">Firstname</th>
@@ -279,15 +383,21 @@ span.psw {
             </tr>
         </tbody>
        </table>
+        <br>
+        <table class="columns" style=" width: 1000px;margin-right: auto;margin-left: auto;">
+      	<tr>
+        <td><div id="Reply_chart_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="Question_chart_div" style="border: 1px solid #ccc"></div></td>
+      	</tr>
+    	</table>
+        <br>
         <a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/updateprofile.jsp"><button class="edit">Edit profile</button></a>
         <br>
-         <p style="color:red;  font-weight: 900; text-align: center;">
-		<%if(error.equals("Update Success!!.")) { out.println(error);}%>
-		</p>
+        
 		<br>
         <a href="http://localhost:8080/Placement_Preparation_Portal/HomePage/resetpassword.jsp"><button class="edit">Reset Password</button></a>
-	<br><p style="color:red;  font-weight: 900; text-align: center;">
-		<%if(request.getParameter("errors")!=null) { out.println(request.getParameter("errors"));};%>
-		</p>
+		<br>
+		
+		<br>
 </body>
 </html>

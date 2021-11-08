@@ -11,7 +11,11 @@
 
 
 <title>Placement Preparation</title>
-
+	<%
+	// get the students from the request object (sent by servlet)
+	List<Feedbacks> thefeeds = (List<Feedbacks>) request.getAttribute("FEEDS_LIST");
+	List<Integer> feedcount = (List<Integer>) request.getAttribute("FEEDS_COUNT");
+	%>
 <script>
   function myFun(checkbox) {
     var checkboxes = document.getElementsByName('LikeorUnlike')
@@ -42,14 +46,52 @@
 	}
   } 
 </script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+ // Load Charts and the corechart package.
+    google.charts.load('current', {'packages':['corechart','geochart']});
 
+    // Draw the pie chart for Sarah's pizza when Charts is loaded.
+    google.charts.setOnLoadCallback(drawSarahChart);
+
+    function drawSarahChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Column 1');
+      data.addColumn('number', 'Feedback count');
+      data.addRows([
+        ['Like', <%= feedcount.get(1) %>],
+        ['Unlike', <%= feedcount.get(2) %>]
+      ]);
+
+      var options = {title:'Your Contribution to Valuable Answers',
+                     width:600,
+                     height:500,
+                     };
+
+      var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+      chart.draw(data, options);
+    }
+    
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Team size'],
+        ['India', 4],
+        
+      ]);
+
+      var options = {};
+
+      var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+    }
+
+    
+ </script>
 </head>
 <body>
-	<%
-	// get the students from the request object (sent by servlet)
-	List<Feedbacks> thefeeds = (List<Feedbacks>) request.getAttribute("FEEDS_LIST");
-	List<Integer> feedcount = (List<Integer>) request.getAttribute("FEEDS_COUNT");
-	%>
 	
 	<jsp:include page="navbar.jsp"/>
 
@@ -134,6 +176,14 @@
 	     	</div>
 	     </div>	
      </div>
+     
+     <div>
+	     <table class="columns" style=" width:100%;margin-right: auto;margin-left: auto;">
+	      	<tr style="width:100%; height:max-content;">
+	        <td style="width:max-content;height:max-content; display:block; margin-left:auto;margin-right:auto;"><div id="Sarah_chart_div" style="border: 1px solid #ccc; display: inline-block; margin:auto;"></div></td>
+	      	</tr>
+	    </table>
+     </div>
         
         <div class="feedback">
         	<img src="feedback.png" alt="img"/>
@@ -167,6 +217,9 @@
                     <button type="submit" onClick="return validate_feedback();">Submit</button>
                   </div>   
             </form>
+            <br>
+            <div id="regions_div" style="width: 90%; height: 500px; margin:auto; display:block;"></div>
+            <br>
         </div>
     </section>
     

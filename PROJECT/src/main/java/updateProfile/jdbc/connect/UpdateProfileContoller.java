@@ -110,6 +110,19 @@ private LoginDB Logindb;
 		        
 		        session = request.getSession();
 				session.removeAttribute("userinfo");
+				
+				String userreplies="";
+	        	String userq="";
+				try {
+					userreplies = Logindb.CountReplies(temp[1]);
+					userq = Logindb.CountQ(temp[1]);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				userValidate = userValidate+userreplies+userq;
+				
+				
 				session.setAttribute("userinfo", userValidate);
 		        
 		        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/HomePage/Profile.jsp");
