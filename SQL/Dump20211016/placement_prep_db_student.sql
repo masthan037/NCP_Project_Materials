@@ -29,6 +29,7 @@ CREATE TABLE `student` (
   `Email` varchar(45) NOT NULL,
   `DOB` varchar(10) NOT NULL,
   `Password` varchar(45) NOT NULL,
+  `gender` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`UserName`),
   UNIQUE KEY `EmailId_UNIQUE` (`Email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -40,7 +41,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('anand','Anand',NULL,'anand@gmail.com','02-02-2000','anand'),('atinvento','Rohit','Surya','atinvento@gmail.com','04-12-1999','rohit'),('coder','Ramesh','Kumar','coderramesh@gmail.com','04-12-1999','ramesh'),('lokesh','Lokesh',NULL,'lokesh@gmail.com','22-04-2000','lokesh1234'),('masthanifran','Masthan','Vali','masthan@gmail.com','01-01-2000','masthan'),('myuser','Sheekar','Sundar','shekar01@outlook.com','20-10-2001','1234shekar');
+INSERT INTO `student` VALUES ('anand','Anand',NULL,'anand@gmail.com','02-02-2000','anand','Male'),('atinvento','Rohit','Surya','atinvento@gmail.com','1999-12-04','rohit1234','Male'),('coder','Ramesh','Kumar','coderramesh@gmail.com','04-12-1999','ramesh','Male'),('lokesh','Lokesh',NULL,'lokesh@gmail.com','22-04-2000','lokesh1234','Male'),('luckyone','sita','k','sita@gmail.com','2021-11-05','sita1234','female'),('myuser','Sheekar','Sundar','shekar01@outlook.com','20-10-2001','1234shekar','Male');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-24 22:13:16
+-- Dump completed on 2021-11-09  0:43:43

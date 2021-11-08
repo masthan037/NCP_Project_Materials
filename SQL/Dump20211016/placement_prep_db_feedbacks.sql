@@ -31,7 +31,7 @@ CREATE TABLE `feedbacks` (
   `heading` varchar(45) DEFAULT 'Good',
   `comment` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`SID`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `feedbacks` (
 
 LOCK TABLES `feedbacks` WRITE;
 /*!40000 ALTER TABLE `feedbacks` DISABLE KEYS */;
-INSERT INTO `feedbacks` VALUES (12,'2021-10-14','Guest User','a@gmail.com','like','Good','Nice website'),(14,'2021-10-15','Guest User','a@gmail.com','like','Good','nice'),(22,'2021-10-21','Rohit','kgtanuvas@gmail.com','unlike','okay','less contents'),(25,'2021-10-24','Ram','ram@example.com','like','Awesome','Fantastic Website and well organized content'),(26,'2021-10-24','Kishan Kumar','kgtanuvas@gmail.com','like','fantastic','nice website with loads of useful content'),(27,'2021-10-24','Guest User','sam@gmail.com','unlike','Average','Good resources but seems to be few.'),(28,'2021-10-24','Guest User','ramesh@outlook.com','unlike','Average Content','Felt the website needs some more resources.'),(29,'2021-10-24','Sundar','sundar@gmail.com','like','Fantastic','Good Website with good resources and discussion support'),(30,'2021-10-24','Shekar','shekarss@gmail.com','like','Nice Website','Easy to understand and read with good discussion support.');
+INSERT INTO `feedbacks` VALUES (12,'2021-10-14','Guest User','a@gmail.com','like','Good','Nice website'),(14,'2021-10-15','Guest User','a@gmail.com','like','Good','nice'),(22,'2021-10-21','Rohit','kgtanuvas@gmail.com','unlike','okay','less contents'),(25,'2021-10-24','Ram','ram@example.com','like','Awesome','Fantastic Website and well organized content'),(26,'2021-10-24','Kishan Kumar','kgtanuvas@gmail.com','like','fantastic','nice website with loads of useful content'),(27,'2021-10-24','Guest User','sam@gmail.com','unlike','Average','Good resources but seems to be few.'),(28,'2021-10-24','Guest User','ramesh@outlook.com','unlike','Average Content','Felt the website needs some more resources.'),(29,'2021-10-24','Sundar','sundar@gmail.com','like','Fantastic','Good Website with good resources and discussion support'),(30,'2021-10-24','Shekar','shekarss@gmail.com','like','Nice Website','Easy to understand and read with good discussion support.'),(32,'2021-10-25','Surya','surya@gmail.com','like','Very Useful Website','A good website with well-organized contents'),(33,'2021-10-25','Guest User','atinvento1@outlook.com','like','Good website','nice website with awesome content'),(34,'2021-11-01','rohit','a@gmail.com','like','Nice website','Good Doubt clearance support');
 /*!40000 ALTER TABLE `feedbacks` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-24 22:13:16
+-- Dump completed on 2021-11-09  0:43:43
