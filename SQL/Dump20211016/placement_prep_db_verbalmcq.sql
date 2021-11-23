@@ -16,8 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping routines for database 'placement_prep_db'
+-- Table structure for table `verbalmcq`
 --
+
+DROP TABLE IF EXISTS `verbalmcq`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `verbalmcq` (
+  `verbID` int NOT NULL AUTO_INCREMENT,
+  `verbQuestion` varchar(500) NOT NULL,
+  `A` varchar(45) NOT NULL,
+  `B` varchar(45) NOT NULL,
+  `C` varchar(45) NOT NULL,
+  `D` varchar(45) NOT NULL,
+  `verbAns` varchar(45) NOT NULL,
+  PRIMARY KEY (`verbID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `verbalmcq`
+--
+
+LOCK TABLES `verbalmcq` WRITE;
+/*!40000 ALTER TABLE `verbalmcq` DISABLE KEYS */;
+INSERT INTO `verbalmcq` VALUES (1,'The city needs an airport 1)/ that can efficiently manage 2)/ a constantly flow of 3)/ passengers and flights. 4)/ No errors 5)','(1)','(2)','(3)','(4)','(3)'),(2,'(P) I told him (Q) the story (R) in details to make him understand it fully. (S) No error','P','Q','R','S','R'),(3,'One of my friend (1)/ has gone (2)/ to Canada. (3)/ No error (4)','(1)','(2)','(3)','(4)','(1)');
+/*!40000 ALTER TABLE `verbalmcq` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

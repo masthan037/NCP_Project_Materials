@@ -115,8 +115,8 @@
             <br/>
             <ul>
                 <li><a href="Resources/resume.jsp" class="res"><p>Resume</p></a></li>
-                <li><a href="Resources/apptitude.jsp" class="res"><p>Apptitude</p></a></li>
-                <li><a href="Resources/verbal.jsp" class="res"><p>Verbal</p></a></li>
+                <li><a href="http://localhost:8080/Placement_Preparation_Portal/apptitudeServletController" class="res"><p>Apptitude</p></a></li>
+                <li><a href="http://localhost:8080/Placement_Preparation_Portal/verbalServletController" class="res"><p>Verbal</p></a></li>
                 <li><a href="Resources/DSA.jsp" class="res"><p>Data Structure and Algorithms</p></a></li>
                 <li><a href="Resources/OperatingSystem.jsp" class="res"><p>Operating System</p></a></li>
                 <li><a href="Resources/ComputerNetworks.jsp" class="res"><p>Computer Networks</p></a></li>
