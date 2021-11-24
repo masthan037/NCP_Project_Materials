@@ -116,6 +116,7 @@ public class apptitudeServletController extends HttpServlet {
 				if(ans.equals(feeds.get(i).getAns())) {
 					System.out.println(ans);
 					count+=1;
+				
 				}
 			}
 			

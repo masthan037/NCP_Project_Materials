@@ -72,6 +72,13 @@ a {
   text-decoration: none;
   color: black;
 }
+.main-content-container {
+  margin-left: 30px;
+  margin-right:30px;
+  margin-bottom:30px;
+  padding: 10px;
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.2);
+}
 
 </style>
 
@@ -84,23 +91,24 @@ a {
 	<jsp:include page="../navbar.jsp"/>
 	
 	<br>
-	<p style="color:red;">
+	<h3 class="text-center" style="color:#2F86A6">Aptitude MCQ</h3>
+	<p style="color:red;" class="text-center">
 	<%if(request.getParameter("error")!=null) { out.println(request.getParameter("error"));};%>
 	</p>
 	<br>
+	<div class="main-content-container">
 	<form action="apptitudeServletController" method="POST">
 	<% for (apptitude tempmcq : ans) { %>
-	<label>Q<%=q %>.<%=tempmcq.getMcqQ() %></label>
-	<select name=<%=tempmcq.getMcqID()%>>
-	<option value=<%=tempmcq.getA() %>><%=tempmcq.getA() %></option>
-	<option value=<%=tempmcq.getB() %>><%=tempmcq.getB() %></option>
-	<option value=<%=tempmcq.getC() %>><%=tempmcq.getC() %></option>
-	<option value=<%=tempmcq.getD() %>><%=tempmcq.getD() %></option>
-	</select>
+	<h6>Q<%=q %>.<%=tempmcq.getMcqQ() %></h6>
+	<p><input type="radio" name=<%=tempmcq.getMcqID()%> value=<%=tempmcq.getA() %> checked> <%=tempmcq.getA() %></p>
+	<p><input type="radio" name=<%=tempmcq.getMcqID()%> value=<%=tempmcq.getB() %>> <%=tempmcq.getB() %></p>
+	<p><input type="radio" name=<%=tempmcq.getMcqID()%> value=<%=tempmcq.getC() %>> <%=tempmcq.getC() %></p>
+	<p><input type="radio" name=<%=tempmcq.getMcqID()%> value=<%=tempmcq.getD() %>> <%=tempmcq.getD() %></p> 
 	<br>
 	<% q=q+1;} %>
-	<input type="submit"/>
+	<input type="submit" class="btn btn-info"/>
 	</form>
-	
+	</div>
+		<jsp:include page="../footer.jsp"/> 
 </body>
 </html>
