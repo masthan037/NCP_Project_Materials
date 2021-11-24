@@ -84,10 +84,14 @@ a {
 	<jsp:include page="../navbar.jsp"/>
 	
 	<br>
-	<form action="" method="POST">
+	<p style="color:red;">
+	<%if(request.getParameter("error")!=null) { out.println(request.getParameter("error"));};%>
+	</p>
+	<br>
+	<form action="apptitudeServletController" method="POST">
 	<% for (apptitude tempmcq : ans) { %>
 	<label>Q<%=q %>.<%=tempmcq.getMcqQ() %></label>
-	<select name=<%=tempmcq.getMcqID() %>>
+	<select name=<%=tempmcq.getMcqID()%>>
 	<option value=<%=tempmcq.getA() %>><%=tempmcq.getA() %></option>
 	<option value=<%=tempmcq.getB() %>><%=tempmcq.getB() %></option>
 	<option value=<%=tempmcq.getC() %>><%=tempmcq.getC() %></option>

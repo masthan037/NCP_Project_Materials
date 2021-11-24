@@ -84,6 +84,11 @@ a {
 	<jsp:include page="../navbar.jsp"/>
 	
 	<br>
+	<p style="color:red;">
+	<%if(request.getParameter("error")!=null) { out.println(request.getParameter("error"));};%>
+	</p>
+	<br>
+	
 	<form action="" method="POST">
 	<% for (verbal tempmcq : mcqs) { %>
 	<label>Q<%=q %>.<%=tempmcq.getMcqQ() %></label>
