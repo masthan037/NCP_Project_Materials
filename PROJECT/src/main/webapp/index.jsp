@@ -63,7 +63,7 @@
         ['Unlike', <%= feedcount.get(2) %>]
       ]);
 
-      var options = {title:'Your Contribution to Valuable Answers',
+      var options = {title:'Likes Vs Unlikes',
                      width:600,
                      height:500,
                      };

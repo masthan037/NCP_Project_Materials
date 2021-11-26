@@ -10,15 +10,15 @@ public class Mailer {
 	private static String mailHost="smtp.gmail.com";
 public static void send(String to,String subject,String msg){  
   
-final String user="masthanmasthi037@gmail.com";//change accordingly  
-final String pass="Irfan@037";  
+final String user="c8.smartgracemarkcalculator@gmail.com";//change accordingly  
+final String pass="zrxr mlxm ebdw lwuw";  
   
 //1st step) Get the session object    
 Properties props = new Properties();
 props.put("mail.smtp.starttls.enable", "true");
 props.put("mail.transport.protocol", "smtp");
 props.put("mail.smtp.host", mailHost);
-props.put("mail.smtp.port", "25");
+props.put("mail.smtp.port", "587");
 props.put("mail.smtp.auth", "true");  
   
 Session session = Session.getDefaultInstance(props,  

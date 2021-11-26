@@ -15,6 +15,7 @@ import javax.sql.DataSource;
 
 import Login.account.jdbc.connect.LoginAcc;
 import Login.account.jdbc.connect.LoginDB;
+import create.account.jdbc.connect.SendMailCreate;
 
 
 
@@ -125,6 +126,7 @@ private LoginDB Logindb;
 				
 				session.setAttribute("userinfo", userValidate);
 		        
+				SendMailUpdate.succesfullUpdate(temp[1],Email);
 		        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/HomePage/Profile.jsp");
 		 
 		        requestDispatcher.forward(request, response);

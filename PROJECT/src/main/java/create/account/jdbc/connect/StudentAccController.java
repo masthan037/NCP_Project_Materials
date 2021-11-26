@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import create.account.jdbc.connect.*;
 import test.jdbc.connection.FeedbackDbUtil;
 
 /**
@@ -121,7 +122,7 @@ private StudentAccDB studentAccDB;
 		//			request.setAttribute("Created", "Account Created");
 		//			RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
 		//			rd.include(request, response);;
-					
+					SendMailCreate.succesfullCreation(UserName,Email);	
 				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=Account Created successful...Please Login");  
 			
 		}
