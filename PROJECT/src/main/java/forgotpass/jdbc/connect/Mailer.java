@@ -11,7 +11,7 @@ public class Mailer {
 public static void send(String to,String subject,String msg){  
   
 final String user="c8.smartgracemarkcalculator@gmail.com";//change accordingly  
-final String pass="zrxr mlxm ebdw lwuw";  
+final String pass="ffuueutqolarjqxd";  
   
 //1st step) Get the session object    
 Properties props = new Properties();

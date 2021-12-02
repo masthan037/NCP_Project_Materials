@@ -126,7 +126,7 @@ private LoginDB Logindb;
 				
 				session.setAttribute("userinfo", userValidate);
 		        
-				SendMailUpdate.succesfullUpdate(temp[1],Email);
+				//SendMailUpdate.succesfullUpdate(temp[1],Email);
 		        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/HomePage/Profile.jsp");
 		 
 		        requestDispatcher.forward(request, response);

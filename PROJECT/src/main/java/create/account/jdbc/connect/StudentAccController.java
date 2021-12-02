@@ -122,7 +122,7 @@ private StudentAccDB studentAccDB;
 		//			request.setAttribute("Created", "Account Created");
 		//			RequestDispatcher rd = request.getRequestDispatcher("HomePage.jsp");
 		//			rd.include(request, response);;
-					SendMailCreate.succesfullCreation(UserName,Email);	
+					//SendMailCreate.succesfullCreation(UserName,Email);	
 				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/signUp.jsp?errors=Account Created successful...Please Login");  
 			
 		}

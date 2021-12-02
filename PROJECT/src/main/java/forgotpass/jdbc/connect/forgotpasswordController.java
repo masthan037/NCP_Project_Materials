@@ -86,7 +86,7 @@ public class forgotpasswordController extends HttpServlet {
 			// send to JSP page (view)
 			if(feeds.length()!=0) {
 				System.out.println(feeds);
-				SendMail.sendpass(email, feeds);
+				//SendMail.sendpass(email, feeds);
 				response.sendRedirect("http://localhost:8080/Placement_Preparation_Portal/HomePage/forgotpassword.jsp?error=Please check your mail!!");
 			}
 			else {
